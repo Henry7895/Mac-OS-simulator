@@ -15,11 +15,11 @@ Screenshots will be added here after the first published build:
 
 ## Features
 
-- Animated boot flow, first-run setup, lock screen, desktop and inactivity lock.
+- Animated boot flow, first-run setup, a lock screen with editable profile photo/name, automatic lock after one minute of inactivity, and desktop.
 - Draggable/resizable app windows, minimize/maximize, edge snapping, context menu and Dock.
 - Menu bar with app menus, live date/time, Spotlight search and Control Center.
-- Finder with a persisted virtual file system; folders and files can be created, renamed, edited and moved to Trash.
-- Simulated Safari with address bar, tabs, internal pages and best-effort embedded websites.
+- Finder with a persisted virtual file system; folders and files can be created, previewed, and moved to Trash.
+- Simulated Safari with an address bar, an internal welcome page, favorite shortcuts and an option to open a URL in the external browser.
 - Terminal commands: `help`, `ls`, `cd`, `pwd`, `mkdir`, `touch`, `rm`, `cat`, `echo`, `clear`, `whoami`, `date`, `neofetch`.
 - Notes with auto-save and search; Photos wallpaper gallery; generated-sound Music player.
 - System Settings for appearance, wallpaper, brightness, volume, Dock and simulated device information.
@@ -75,6 +75,10 @@ src/
 electron/            Electron main process and preload
 .github/workflows/   Windows release and GitHub Pages deployment
 ```
+
+## Design reference
+
+The interaction checklist and component separation were informed by the public [MacOS-Web-Simulator project](https://github.com/LikhithSP/MacOS-Web-Simulator) (MIT-licensed). This repository has its own implementation and original CSS-generated visuals; its source code, wallpapers and icon assets are not copied into this project.
 
 ## License and attribution
 
