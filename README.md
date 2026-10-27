@@ -54,7 +54,9 @@ npm run build
 
 ## GitHub Pages
 
-The `.github/workflows/pages.yml` workflow builds the static version and deploys it on pushes to `main`. In **Settings → Pages**, choose **GitHub Actions** as the build and deployment source if it is not already selected. Vite uses relative asset paths so the app works from a project subpath.
+The `.github/workflows/pages.yml` workflow builds the static site and publishes `dist/` directly to the `gh-pages` branch on pushes to `main`. It deliberately avoids the Actions artifact upload service, which also prevents this deployment from being blocked by an exhausted artifact quota. The workflow cleans up stored Actions artifacts from this repository before building; this does not delete Git releases or source files.
+
+**One-time setup:** open **Settings → Pages**, select **Deploy from a branch**, then choose the `gh-pages` branch and the `/(root)` folder. Vite uses relative asset paths for project subpaths.
 
 ## Download for Windows
 
