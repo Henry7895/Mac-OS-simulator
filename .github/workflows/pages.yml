@@ -6,6 +6,7 @@ on:
 permissions:
   contents: write
   actions: write
+  pages: write
 concurrency:
   group: pages
   cancel-in-progress: true
@@ -61,3 +62,20 @@ jobs:
           publish_branch: gh-pages
           force_orphan: true
           commit_message: "Deploy GitHub Pages from ${{ github.sha }}"
+
+      # GITHUB_TOKEN pushes do not automatically trigger a Pages branch build.
+      # Request one explicitly, without uploading an Actions artifact.
+      - name: Request GitHub Pages build
+        uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              const response = await github.rest.repos.requestPagesBuild({
+                owner: context.repo.owner,
+                repo: context.repo.repo
+              });
+              core.info(`GitHub Pages build request: ${response.data.status || "queued"}`);
+            } catch (error) {
+              core.warning(`Could not request a Pages build yet: ${error.message}`);
+              core.warning("In Settings > Pages, select Deploy from a branch, gh-pages, /(root), then rerun this workflow.");
+            }
