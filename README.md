@@ -15,7 +15,7 @@ Screenshots will be added here after the first published build:
 
 ## Features
 
-- Animated boot flow, first-run setup, a lock screen with editable profile photo/name, automatic lock after one minute of inactivity, and desktop.
+- Animated boot sequence followed by a multi-step first-run assistant: language, region, accessibility options, simulated Wi-Fi, privacy, account/profile photo, appearance and wallpaper. The profile is editable from the lock screen; desktop inactivity triggers auto-lock after one minute.
 - Draggable/resizable app windows, minimize/maximize, edge snapping, context menu and Dock.
 - Menu bar with app menus, live date/time, Spotlight search and Control Center.
 - Finder with a persisted virtual file system; folders and files can be created, previewed, and moved to Trash.
@@ -24,7 +24,7 @@ Screenshots will be added here after the first published build:
 - Notes with auto-save and search; Photos wallpaper gallery; generated-sound Music player.
 - System Settings for appearance, wallpaper, brightness, volume, Dock and simulated device information.
 - Calculator, navigable Calendar with saved events, and a restorable Trash.
-- Light/dark appearance and original CSS-generated aurora wallpapers.
+- Light/dark appearance, original layered CSS aurora wallpapers, and background-only brightness control so the interface itself stays readable.
 - Browser build deployable to GitHub Pages and Windows installer packaged with Electron.
 
 ## Stack
@@ -69,7 +69,7 @@ To produce a release, push a version tag such as `v1.0.0`. GitHub Actions builds
 ```
 src/
   apps/             Finder, Safari, Terminal, Notes, Photos, Music, Settings, utilities
-  components/       Boot, setup, lock screen, desktop, menu bar, Dock, windows and overlays
+  components/       Multi-step SetupAssistant, boot, lock screen, desktop, menu bar, Dock, windows and overlays
   store/            Persisted simulator state
   assets/            Original CSS/SVG-style visuals
 electron/            Electron main process and preload
