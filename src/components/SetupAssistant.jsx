@@ -195,7 +195,7 @@ export default function SetupAssistant({ username, wall, dark, avatar, onComplet
       </div>
       <div className="setup-panel-footer">
         <div className="setup-step-dots">{STAGES.map((item, index) => <button key={item.label} className={index===step ? "active" : index<step ? "done" : ""} onClick={() => { if(index<step) setStep(index); }} aria-label={"Étape "+item.label} />)}</div>
-        <div className="setup-footer-actions">{step>0 && <button className="setup-back-button" onClick={back}><ArrowLeft size={15}/> Retour</button>}<button className="setup-next-button" onClick={next}>{step===STAGES.length-1 ? "Démarrer la session" : step===STAGES.length-2 ? "Terminer la configuration" : "Continuer"} {step===STAGES.length-1 ? <Check size={16}/> : <ArrowRight size={16}/>}</button></div>
+        <div className="setup-footer-actions">{step>0 && <button className="setup-back-button" onClick={back}><ArrowLeft size={15}/> Retour</button>}<button className="setup-next-button" onClick={next}>{step===STAGES.length-1 ? "Démarrer la session" : "Continuer"} {step===STAGES.length-1 ? <Check size={16}/> : <ArrowRight size={16}/>}</button></div>
       </div>
     </motion.section>
     <div className="setup-bottom-note">Un simulateur de bureau indépendant · Aucun compte Apple requis</div>
