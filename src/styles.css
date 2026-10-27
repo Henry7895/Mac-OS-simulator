@@ -188,3 +188,34 @@
 .bootline { margin:35px auto 13px; height:3px; width:150px; background:rgba(255,255,255,.32); box-shadow:0 0 0 1px rgba(255,255,255,.08); overflow:hidden; }
 .bootline i { background:linear-gradient(90deg,rgba(255,255,255,.7),#fff); box-shadow:0 0 9px rgba(255,255,255,.7); animation:bootload 2.05s cubic-bezier(.25,.7,.2,1) forwards; }
 .boot p { font-size:11px; letter-spacing:.2px; color:rgba(255,255,255,.86); }
+
+
+.desktop-icons { gap:15px; top:53px; right:19px; }
+.desktop-icons button {
+  width:88px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:5px;
+  border-radius:9px;
+  padding:6px 4px;
+  color:#fff;
+  font-size:11px;
+  line-height:1.25;
+  text-align:center;
+  text-shadow:0 1px 3px rgba(0,0,0,.75);
+  transition:background .14s ease;
+}
+.desktop-icons button:hover { background:rgba(255,255,255,.16); }
+.desktop-icon-art {
+  width:45px;height:40px;
+  display:grid;place-items:center;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:9px;
+  background:linear-gradient(145deg,#6fb8fa,#2874d2);
+  box-shadow:0 5px 13px rgba(3,10,27,.25),inset 0 1px rgba(255,255,255,.45);
+}
+.desktop-icon-art-1 { color:#fff; background:linear-gradient(145deg,#88d4ff,#4d91ec); }
+.desktop-icon-art-2 { color:#fff; background:linear-gradient(145deg,#7bc8ff,#347dd8); }
+.desktop-icons button:active { transform:scale(.97); }
