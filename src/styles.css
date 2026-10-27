@@ -1,3 +1,160 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @tailwind base;@tailwind components;@tailwind utilities;
 *{box-sizing:border-box}body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#fff}button,input,textarea{font:inherit}button{cursor:pointer;color:inherit;border:0}button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #78b8ff;outline-offset:2px}.setup,.boot,.lockscreen{height:100vh;width:100vw;display:grid;place-items:center;background-size:cover;background-position:center}.setupcard{width:min(520px,92vw);padding:36px;border-radius:28px;background:#ffffffd9;color:#242736;box-shadow:0 28px 90px #0005;backdrop-filter:blur(35px)}.appleglyph{text-align:center}.setupcard h1,.setupcard>p{text-align:center}.setupcard h1{font-size:27px;letter-spacing:-1px}.setupcard>p{color:#687083;margin-bottom:30px}.setupcard label{display:block;font-size:13px;margin:18px 0 8px}.setupcard>input{width:100%;border:1px solid #ddd;border-radius:10px;padding:12px;color:#222}.primary{background:#087bfa;color:white;padding:11px 18px;border-radius:12px;width:100%;margin-top:22px}.primary span{float:right}.wallgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:15px 0}.wallgrid button{color:#202334;font-size:11px;border:2px solid transparent;border-radius:12px;padding:4px;background:#fff8}.wallgrid button>div{height:64px;border-radius:8px;margin-bottom:6px}.wallgrid .wallselected{border-color:#1684ff}.boot{color:white;text-align:center}.bootline{width:160px;height:4px;background:#ffffff48;border-radius:10px;overflow:hidden;margin:30px auto 12px}.bootline i{display:block;height:100%;background:white;animation:bootload 1.5s ease forwards}@keyframes bootload{from{width:0}to{width:100%}}.boot p{font-size:12px;opacity:.7}.lockscreen{color:white;text-align:center;position:relative}.locktime{font-size:100px;font-weight:300;letter-spacing:-7px}.lockscreen h1{font-size:20px;font-weight:400;margin-top:-5px}.avatar{margin:30px auto 10px;width:76px;height:76px;border-radius:50%;background:#ffffff55;display:grid;place-items:center;font-size:30px;overflow:hidden}.avatar img{width:100%;height:100%;object-fit:cover}.lockscreen h2{font-size:16px}.lockpower{position:absolute;bottom:30px;right:35px;background:#ffffff2a;border-radius:50%;padding:10px}.desktop{height:100vh;width:100vw;overflow:hidden;background-size:cover;background-position:center;position:relative;outline:none;transition:filter .2s}.dark{color:#fff}.light{color:#202331}.menubar{position:absolute;z-index:1000;top:0;left:0;right:0;height:30px;display:flex;align-items:center;gap:16px;padding:0 14px;background:#dce7f32c;backdrop-filter:blur(34px) saturate(180%);border-bottom:1px solid #ffffff38;font-size:12px}.menubar button{background:transparent;padding:5px;border-radius:6px}.menubar button:hover{background:#ffffff30}.menubar>b{font-weight:700}.menulabel{opacity:.92}.menuright{margin-left:auto;display:flex;align-items:center;gap:10px;font-size:11px}.applemenu,.controlpanel{position:absolute;top:32px;right:12px;width:270px;padding:10px;border-radius:15px;background:#222a3be8;border:1px solid #ffffff38;box-shadow:0 16px 50px #0005;backdrop-filter:blur(40px);color:white}.applemenu{left:8px;right:auto;width:210px}.applemenu button{display:block;text-align:left;width:100%;padding:9px;border-radius:7px}.applemenu button:hover,.contextmenu button:hover{background:#3986ed}.controlpanel h3{font-size:14px;margin:8px}.controltiles{display:grid;grid-template-columns:1fr 1fr;gap:8px}.controltiles button{background:#ffffff1c;border-radius:10px;padding:12px;text-align:left;font-size:12px}.controltiles b{display:block;font-size:10px;opacity:.65;margin-top:7px}.controlpanel label{display:flex;align-items:center;gap:9px;font-size:12px;margin:17px 5px}.controlpanel input{width:130px}.desktop-icons{position:absolute;right:24px;top:54px;display:grid;gap:18px}.desktop-icons button{width:82px;background:transparent;display:grid;justify-items:center;gap:5px;text-shadow:0 1px 4px #000;font-size:11px}.desktop-icons button span{font-size:32px}.windowlayer{position:absolute;inset:30px 0 78px;pointer-events:none}.windowlayer>div{pointer-events:auto}.appwindow{height:100%;width:100%;display:flex;flex-direction:column;overflow:hidden;border-radius:13px;background:#f7f7f9f2;color:#242631;border:1px solid #ffffffa8;box-shadow:0 25px 80px #0004,0 2px 10px #0002;backdrop-filter:blur(38px) saturate(160%)}.windowtitle{height:42px;flex-shrink:0;display:grid;grid-template-columns:1fr 2fr 1fr;align-items:center;padding:0 13px;background:#e8e9eef0;border-bottom:1px solid #d3d4da}.windowtitle strong{text-align:center;font-size:12px;font-weight:600}.traffic{display:flex;gap:7px}.traffic button{width:12px;height:12px;border-radius:50%;display:grid;place-items:center;background:#ff6058;color:#70211b;padding:0}.traffic button:nth-child(2){background:#ffbd2e;color:#704b00}.traffic button:nth-child(3){background:#28c840;color:#075b17}.windowbody{min-height:0;flex:1;overflow:auto}.dockwrap{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);max-width:96vw}.dock{display:flex;align-items:end;gap:8px;padding:8px 11px 6px;border-radius:21px;background:#dce7f34b;border:1px solid #ffffff72;box-shadow:0 8px 30px #0002;backdrop-filter:blur(35px) saturate(180%)}.dock button{position:relative;padding:0;background:transparent;display:grid;justify-items:center;gap:3px;transform-origin:bottom}.dock button span{width:48px;height:48px;border-radius:13px;display:grid;place-items:center;box-shadow:inset 0 1px 1px #ffffff75,0 3px 8px #0003}.dock button:nth-child(8) span{color:#e44c52!important}.dock button i{width:4px;height:4px;border-radius:50%;background:currentColor;position:absolute;bottom:-4px}.desktop-corner{position:absolute;bottom:13px;right:12px}.desktop-corner button{background:#ffffff30;border-radius:50%;padding:8px;backdrop-filter:blur(15px)}.spotlight{position:absolute;z-index:1200;top:18%;left:50%;transform:translateX(-50%);width:min(620px,90vw);border-radius:18px;background:#242a3aeb;border:1px solid #ffffff4f;box-shadow:0 30px 100px #0007;backdrop-filter:blur(45px);padding:10px;color:white}.spotlight>div{display:flex;align-items:center;gap:10px;padding:9px;border-bottom:1px solid #ffffff2b}.spotlight input{flex:1;background:transparent;border:0;color:white;outline:none}.spotlight kbd{font-size:10px;opacity:.6}.spotresult{display:flex;align-items:center;gap:12px;width:100%;padding:10px;background:transparent;border-radius:9px;text-align:left}.spotresult:hover{background:#ffffff20}.spotresult span{margin-left:auto;opacity:.5;font-size:11px}.contextmenu{position:absolute;z-index:1300;width:200px;padding:6px;border-radius:10px;background:#222b3bec;backdrop-filter:blur(30px);border:1px solid #ffffff38;box-shadow:0 12px 35px #0004}.contextmenu button{display:block;width:100%;padding:9px;text-align:left;font-size:12px;background:transparent;border-radius:6px}.finder,.notesapp,.settingsapp{display:flex;height:100%;min-height:300px}.sidebar,.notesapp aside,.settingsapp aside{width:175px;flex-shrink:0;background:#e9eaf0;border-right:1px solid #d6d7de;padding:12px 8px;overflow:auto}.sidebar button,.settingsapp aside button{display:block;width:100%;text-align:left;color:#555969;padding:9px;border-radius:7px;background:transparent;font-size:12px}.sidebar button.selected,.notesapp aside button.selected{background:#d1d5df}.filearea{flex:1;min-width:0}.toolbar{height:42px;border-bottom:1px solid #ddd;display:flex;align-items:center;gap:7px;padding:0 12px}.toolbar button,.browserbar button,.browser form button,.webpage button,.musicapp button,.trashapp button{background:#e4e6ed;border-radius:7px;color:#303442;padding:7px 10px;font-size:12px;display:inline-flex;align-items:center;gap:5px}.toolbar span{margin-left:auto;font-size:11px;color:#777}.filegrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(95px,1fr));padding:15px;gap:12px}.fileitem{position:relative;text-align:center;padding:8px;font-size:11px;overflow-wrap:anywhere;border-radius:8px}.fileitem:hover{background:#dce8fa}.fileicon{font-size:36px}.tiny{position:absolute;right:0;top:0;background:#aaa8;border-radius:50%;display:none}.fileitem:hover .tiny{display:block}.browser{height:100%;display:flex;flex-direction:column}.browserbar{display:flex;align-items:center;padding:8px;gap:8px;background:#e6e7ec;border-bottom:1px solid #d1d2d8}.browserbar form{display:flex;flex:1;background:#fff;border-radius:9px;padding:2px 5px}.browserbar input{flex:1;min-width:0;border:0;outline:0;padding:5px;background:transparent;color:#333}.browserbar form button{padding:4px}.webpage{margin:auto;text-align:center;max-width:500px;padding:25px}.safari-mark{margin:auto;width:75px;height:75px;border-radius:24px;display:grid;place-items:center;background:linear-gradient(140deg,#5ad2f2,#1673e9);color:white}.webpage h1{font-size:28px;letter-spacing:-1px}.webpage p{color:#6e7280;line-height:1.6;font-size:13px}.favorites{display:flex;justify-content:center;gap:10px;margin-top:25px}.favorites button{background:#e6e8ef}.terminal{height:100%;background:#17191f;color:#d8e0ec;padding:17px;font:12px/1.6 ui-monospace,monospace;overflow:auto}.terminal form{display:flex;gap:8px}.terminal input{background:transparent;color:white;border:0;outline:0;flex:1}.terminal pre{white-space:pre-wrap;margin:0 0 10px}.prompt{color:#7edba5}.notesapp aside{width:220px}.notesapp aside button{display:block;text-align:left;width:100%;padding:10px;background:transparent;color:#353846;border-radius:8px}.notesapp aside b,.notesapp aside small{display:block}.notesapp aside small{font-size:10px;color:#858999;margin-top:5px}.notesapp section{flex:1;padding:22px;display:flex;flex-direction:column;min-width:0}.notetitle{font-size:22px;font-weight:700;border:0;background:transparent;color:#282a35;margin-bottom:16px}.notesapp textarea{resize:none;flex:1;border:0;background:transparent;color:#343642;outline:none;line-height:1.7}.photosapp{padding:25px;color:#2a2d39}.photosapp h2,.settingsapp h2{font-size:22px;margin:0 0 8px}.photosapp p{color:#777;font-size:12px}.photosapp .wallgrid button{background:#fff;border-color:#e2e3e8}.photosapp .wallgrid button>div{height:115px}.musicapp,.aboutapp{text-align:center;padding:35px;color:#303240}.albumart{width:180px;height:180px;margin:auto;border-radius:25px;display:grid;place-items:center;font-size:95px;color:white;background:radial-gradient(circle at 25% 25%,#ffdd7d,transparent 30%),linear-gradient(135deg,#f16b8c,#6845b5);box-shadow:0 15px 35px #0002}.musicapp h2{margin-bottom:4px}.musicapp p{font-size:12px;color:#7b7e8a}.progress{height:4px;background:#d9dbe1;border-radius:5px;max-width:300px;margin:25px auto}.progress i{display:block;width:35%;height:100%;background:#9c70ec;border-radius:5px}.musiccontrols button{border-radius:50%;background:#333743;color:white;padding:12px}.settingsapp aside{width:155px}.settingsapp section{flex:1;padding:20px;overflow:auto}.settingsapp article{background:#fff;border:1px solid #e0e1e6;border-radius:12px;padding:14px;margin-top:13px}.settingsapp h3{font-size:13px;margin:0 0 12px}.settingrow{display:flex;justify-content:space-between;font-size:12px}.settingrow button{background:#e6e8ef;border-radius:8px;padding:7px;color:#333}.settingsapp label{display:flex;align-items:center;gap:12px;font-size:12px;margin:14px 0}.settingsapp label input{flex:1;max-width:220px}.wallmini{display:flex;gap:10px}.wallmini button{width:70px;height:48px;border-radius:8px;border:2px solid #ddd}.settingsapp article p{font-size:12px;color:#656a78}.calculator{width:310px;margin:25px auto}.calculator>input{width:100%;text-align:right;border:0;background:#e7e8ed;padding:15px;font-size:35px;color:#333;border-radius:12px}.calculator>div{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:10px}.calculator button{height:52px;border-radius:12px;background:#e3e5eb;color:#343642;font-size:18px}.calculator button:nth-child(4n),.calculator button:last-child{background:#f4a43a;color:white}.calendarapp{padding:18px;color:#333542}.calendarapp header{display:flex;align-items:center;justify-content:space-between}.calendarapp header button{background:#e5e7ed;color:#333;border-radius:7px;padding:5px 12px}.calgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin-top:18px}.calgrid>*{height:35px;display:grid;place-items:center;border-radius:7px;font-size:12px}.calgrid button{background:#e9eaf0;color:#333;position:relative}.calgrid button:hover{background:#c9defb}.calgrid button i{position:absolute;bottom:3px;width:4px;height:4px;background:#3b8cf5;border-radius:50%}.calendarapp p,.trashapp{font-size:12px}.trashapp{padding:20px;color:#333}.trashapp p{display:flex;justify-content:space-between}.aboutapp .biglogo{margin:auto;width:90px;height:90px;border-radius:24px;background:linear-gradient(145deg,#f4f5f8,#b5bdcc);display:grid;place-items:center}.aboutapp p{color:#737888;font-size:13px}@media(max-width:850px){.menubar{gap:7px;padding:0 7px}.menulabel{display:none}.menuright span{display:none}.dock{gap:4px}.dock button span{width:39px;height:39px}.dock button span svg{width:23px}.sidebar{width:125px}.notesapp aside{width:145px}.windowlayer{inset:30px 0 75px}.setupcard{padding:25px}.locktime{font-size:72px}}
+
+/* macOS-like surface refinement: stronger wallpaper depth, calm translucency and native window chrome. */
+.desktop {
+  isolation:isolate;
+  background-size:cover!important;
+  background-position:center!important;
+  transition:background .3s ease;
+}
+.desktop::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  background:
+    radial-gradient(ellipse at 50% 12%,rgba(255,255,255,.12),transparent 43%),
+    linear-gradient(180deg,rgba(7,12,25,.05),transparent 45%,rgba(4,8,18,.11));
+}
+.desktop > .menubar,.desktop > .desktop-icons,.desktop > .windowlayer,.desktop > .dockwrap,.desktop > .desktop-corner,.desktop > .spotlight,.desktop > .contextmenu {
+  position:absolute;
+}
+.desktop > .menubar {z-index:1000}
+.desktop > .desktop-icons {z-index:2}
+.desktop > .windowlayer {z-index:5}
+.desktop > .dockwrap {z-index:100}
+.desktop > .desktop-corner {z-index:101}
+.desktop > .spotlight {z-index:1200}
+.desktop > .contextmenu {z-index:1300}
+.menubar {
+  height:31px;
+  padding:0 17px;
+  gap:17px;
+  background:rgba(22,30,48,.27);
+  -webkit-backdrop-filter:blur(42px) saturate(185%);
+  backdrop-filter:blur(42px) saturate(185%);
+  border-bottom:1px solid rgba(255,255,255,.2);
+  box-shadow:0 1px 7px rgba(0,0,0,.08);
+  color:#f9fbff;
+  text-shadow:0 1px 2px rgba(0,0,0,.18);
+}
+.menubar button {transition:background .15s ease,opacity .15s ease}
+.menubar button:hover {background:rgba(255,255,255,.19)}
+.menubar>b {font-weight:700;letter-spacing:-.15px}
+.menuright {gap:11px;font-weight:500;letter-spacing:.05px}
+.menuright span {font-variant-numeric:tabular-nums;white-space:nowrap}
+.applemenu,.controlpanel {
+  background:rgba(245,247,251,.84);
+  color:#252b37;
+  border:1px solid rgba(255,255,255,.82);
+  box-shadow:0 20px 50px rgba(7,15,32,.25),inset 0 1px rgba(255,255,255,.92);
+  -webkit-backdrop-filter:blur(48px) saturate(185%);
+  backdrop-filter:blur(48px) saturate(185%);
+}
+.applemenu button:hover,.contextmenu button:hover {background:rgba(41,126,235,.9);color:white}
+.controlpanel h3 {font-size:13px;font-weight:700;letter-spacing:-.2px}
+.controltiles button {background:rgba(255,255,255,.8);border:1px solid rgba(210,216,227,.7);color:#2e3544}
+.controlpanel label {color:#41495a}
+.controlpanel input {accent-color:#1684f7}
+.dockwrap {bottom:12px}
+.dock {
+  gap:8px;
+  padding:8px 11px 7px;
+  background:rgba(239,244,253,.43);
+  border:1px solid rgba(255,255,255,.63);
+  box-shadow:0 12px 40px rgba(8,13,28,.20),inset 0 1px 1px rgba(255,255,255,.8),inset 0 -1px rgba(12,24,46,.08);
+  -webkit-backdrop-filter:blur(38px) saturate(185%);
+  backdrop-filter:blur(38px) saturate(185%);
+}
+.dock button span {
+  width:49px;height:49px;border-radius:14px;
+  border:1px solid rgba(255,255,255,.35);
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.58),inset 0 -3px 7px rgba(0,0,0,.11),0 4px 8px rgba(12,19,34,.22);
+  transition:filter .15s ease;
+  overflow:hidden;
+}
+.dock button span::after {
+  content:"";
+  position:absolute;
+  top:0;left:0;right:0;height:44%;
+  border-radius:inherit;
+  background:linear-gradient(180deg,rgba(255,255,255,.26),transparent);
+  pointer-events:none;
+}
+.dock button span svg {filter:drop-shadow(0 1px 1px rgba(0,0,0,.14))}
+.dock button:hover span {filter:saturate(1.12) brightness(1.04)}
+.dock button i {width:4px;height:4px;bottom:-5px;background:#fff;box-shadow:0 1px 3px #0005}
+.appwindow {
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.86);
+  background:rgba(248,249,252,.97);
+  box-shadow:0 28px 80px rgba(5,10,22,.28),0 8px 22px rgba(5,10,22,.12),inset 0 1px rgba(255,255,255,.95);
+  -webkit-backdrop-filter:blur(42px) saturate(155%);
+  backdrop-filter:blur(42px) saturate(155%);
+}
+.windowtitle {
+  height:43px;
+  background:linear-gradient(180deg,rgba(247,248,251,.97),rgba(233,235,241,.95));
+  border-bottom:1px solid rgba(191,196,207,.75);
+  -webkit-user-select:none;user-select:none;
+}
+.traffic {gap:8px}
+.traffic button {width:12px;height:12px;position:relative;box-shadow:inset 0 0 0 .5px rgba(0,0,0,.12)}
+.traffic button svg {opacity:0;transition:opacity .1s}
+.traffic:hover button svg {opacity:.9}
+.windowbody {background:rgba(250,250,252,.97)}
+.setup {background-size:cover;background-position:center}
+.spotlight {
+  top:17%;
+  background:rgba(34,40,55,.86);
+  border:1px solid rgba(255,255,255,.32);
+  box-shadow:0 30px 90px rgba(0,0,0,.34),inset 0 1px rgba(255,255,255,.18);
+  -webkit-backdrop-filter:blur(48px) saturate(165%);
+  backdrop-filter:blur(48px) saturate(165%);
+}
+.spotlight>div {border-bottom-color:rgba(255,255,255,.16)}
+.spotlight input {font-size:15px}
+.contextmenu {border:1px solid rgba(255,255,255,.5);box-shadow:0 18px 44px rgba(5,12,28,.3)}
+/* Light and dark appearance is applied consistently to the window chrome and common app surfaces. */
+.dark .appwindow {background:rgba(34,37,46,.97);color:#e8ebf2;border-color:rgba(255,255,255,.18)}
+.dark .windowtitle {background:linear-gradient(180deg,#353842,#2a2d36);border-bottom-color:#454954;color:#eceef5}
+.dark .windowbody {background:#252831;color:#e8ebf2}
+.dark .sidebar,.dark .notesapp aside,.dark .settingsapp aside {background:#292c35;border-color:#424651;color:#d8dce6}
+.dark .sidebar button,.dark .settingsapp aside button {color:#d8dce6}
+.dark .sidebar button.selected,.dark .notesapp aside button.selected {background:#3c414e}
+.dark .toolbar,.dark .browserbar {background:#2e323c;border-color:#454954}
+.dark .toolbar button,.dark .browserbar button,.dark .browser form button,.dark .webpage button,.dark .musicapp button,.dark .trashapp button {background:#424753;color:#edf0f7}
+.dark .toolbar span,.dark .photosapp p,.dark .musicapp p,.dark .aboutapp p {color:#aeb5c4}
+.dark .fileitem:hover {background:#3b4150}
+.dark .notesapp aside button {color:#e3e7ee}
+.dark .notesapp aside small {color:#9ca5b5}
+.dark .notesapp section {background:#252831}
+.dark .notetitle,.dark .notesapp textarea {color:#eceff5}
+.dark .settingsapp section {background:#252831;color:#e8ebf2}
+.dark .settingsapp article {background:#30343e;border-color:#454a56}
+.dark .settingsapp article p,.dark .settingrow {color:#d5dae4}
+.dark .settingrow button,.dark .calendarapp header button {background:#454a56;color:#f1f3f8}
+.dark .photosapp,.dark .calendarapp,.dark .trashapp,.dark .musicapp,.dark .aboutapp {background:#252831;color:#eceff5}
+.dark .photosapp .wallgrid button {background:#30343e;border-color:#454a56;color:#eceff5}
+.dark .browserbar input {background:#383d48;color:#f1f3f8}
+.dark .webpage p {color:#b0b7c5}
+.dark .favorites button {background:#3c414e;color:#f1f3f8}
+.dark .calculator>input {background:#1b1e25;color:#f5f6fa}
+.dark .calculator button {background:#414652;color:#f5f6fa}
+.dark .calendarapp {color:#e8ebf2}
+.dark .calgrid button {background:#383d48;color:#eef1f8}
+.dark .settingsapp .wallmini button {border-color:#5d6573}
+.dark .controltiles button {background:#383d48;border-color:#4a505d;color:#e8ebf2}
+.dark .controlpanel label {color:#e0e5ee}
+.light .menubar {background:rgba(237,242,250,.42);color:#1e2635;text-shadow:none;border-bottom-color:rgba(255,255,255,.4)}
+.light .dock {background:rgba(240,245,253,.59)}
+@media(max-width:850px) {
+  .menubar {padding:0 9px;gap:9px}
+  .menuright {gap:6px}
+  .dockwrap {bottom:7px}
+  .dock {gap:5px;padding:6px 8px}
+  .dock button span {width:42px;height:42px;border-radius:12px}
+}
