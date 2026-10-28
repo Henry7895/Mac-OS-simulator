@@ -41,7 +41,7 @@ const ACCESSIBILITY = [
   { id: "keyboard", title: "Contrôle au clavier", detail: "Mieux naviguer sans souris.", Icon: Keyboard }
 ];
 const WALLPAPERS = [
-  { name: "Golden Gate", value: 0, background: "radial-gradient(ellipse at 18% 18%, #f9bd7e 0%, transparent 34%), radial-gradient(ellipse at 80% 64%, #ee7095 0%, transparent 38%), linear-gradient(132deg,#172d59 1%,#5d469f 52%,#ee7791 78%,#ffca91)" },
+  { name: "Golden Gate", value: 0, background: "url(\"./wallpapers/golden-gate-blue.svg\")" },
   { name: "Aurore", value: 1, background: "radial-gradient(ellipse at 22% 18%,#55eccb 0%,transparent 37%),radial-gradient(ellipse at 80% 72%,#916cf1 0%,transparent 42%),linear-gradient(140deg,#07162d,#123954 64%,#101633)" },
   { name: "Bleu profond", value: 2, background: "radial-gradient(ellipse at 72% 16%,#76d9ff 0%,transparent 35%),radial-gradient(ellipse at 22% 80%,#5e65e8 0%,transparent 45%),linear-gradient(135deg,#0d174a,#342c85,#07162d)" },
   { name: "Rose", value: 3, background: "radial-gradient(ellipse at 18% 78%,#ffc2bc 0%,transparent 40%),radial-gradient(ellipse at 76% 20%,#ed8cc8 0%,transparent 35%),linear-gradient(135deg,#39245f,#984f9c,#f3a6a0)" }
