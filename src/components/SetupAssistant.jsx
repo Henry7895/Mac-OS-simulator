@@ -55,7 +55,7 @@ function BrandMark() {
 
 export default function SetupAssistant({ username, wall, dark, avatar, locale = "fr", onLocaleChange, onComplete }) {
   const [step, setStep] = useState(0);
-  const [language, setLanguage] = useState("Français");
+  const [language, setLanguage] = useState(locale === "en" ? "English" : locale === "es" ? "Español" : locale === "de" ? "Deutsch" : locale === "it" ? "Italiano" : locale === "ja" ? "日本語" : "Français");
   const [region, setRegion] = useState("France");
   const [enabledAccess, setEnabledAccess] = useState([]);
   const [wifiEnabled, setWifiEnabled] = useState(true);
