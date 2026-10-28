@@ -63,6 +63,9 @@ export default function SetupAssistant({ username, wall, dark, avatar, onComplet
   const [fullName, setFullName] = useState(username || "Utilisateur");
   const [accountName, setAccountName] = useState((username || "utilisateur").toLowerCase().replace(/[^a-z0-9-]/g, ""));
   const [profilePhoto, setProfilePhoto] = useState(avatar || "");
+  const [passcode, setPasscode] = useState("");
+  const [passcodeConfirm, setPasscodeConfirm] = useState("");
+  const [passcodeError, setPasscodeError] = useState("");
   const [avatarColor, setAvatarColor] = useState("#8e8cf5");
   const [appearance, setAppearance] = useState(dark ? "dark" : "light");
   const [selectedWall, setSelectedWall] = useState(wall ?? 0);
@@ -90,6 +93,12 @@ export default function SetupAssistant({ username, wall, dark, avatar, onComplet
   };
 
   const next = () => {
+    if (step === 5 && (passcode || passcodeConfirm)) {
+      const validCode = passcode.length >= 4 && passcode.length <= 8 && [...passcode].every(ch => ch >= "0" && ch <= "9");
+      if (!validCode) { setPasscodeError("Le code doit contenir entre 4 et 8 chiffres."); return; }
+      if (passcode !== passcodeConfirm) { setPasscodeError("Les deux codes ne correspondent pas."); return; }
+    }
+    setPasscodeError("");
     if (step < STAGES.length - 1) {
       setStep((current) => current + 1);
       return;
@@ -105,7 +114,8 @@ export default function SetupAssistant({ username, wall, dark, avatar, onComplet
       accessibility: enabledAccess,
       wifiEnabled,
       network: wifiEnabled ? network : "Hors ligne",
-      privacyAnalytics
+      privacyAnalytics,
+      passcode
     });
   };
 
@@ -155,7 +165,7 @@ export default function SetupAssistant({ username, wall, dark, avatar, onComplet
           <button className="setup-photo-button" onClick={() => photoInput.current?.click()}><Upload size={14}/> Choisir une photo</button>
           <input ref={photoInput} type="file" accept="image/*" hidden onChange={choosePhoto} />
           <div className="setup-avatar-swatches">{["#8e8cf5","#4e9bff","#42bfa5","#efa26f","#ed7fa6","#525b6e"].map((color) => <button key={color} style={{ background: color }} aria-label="Couleur de l’avatar" className={avatarColor === color ? "active" : ""} onClick={() => {setAvatarColor(color);setProfilePhoto("");}} />)}</div>
-          <div className="setup-account-fields"><label>Nom complet<input value={fullName} onChange={(e) => {setFullName(e.target.value);if(!accountName || accountName === username.toLowerCase())setAccountName(e.target.value.toLowerCase().replace(/[^a-z0-9-]/g, ""));}} placeholder="Votre nom" /></label><label>Nom du compte<input value={accountName} onChange={(e) => setAccountName(e.target.value.toLowerCase().replace(/[^a-z0-9-]/g, ""))} placeholder="utilisateur" /><small>Utilisé pour le dossier personnel simulé.</small></label></div>
+          <div className="setup-account-fields"><label>Nom complet<input value={fullName} onChange={(e) => {setFullName(e.target.value);if(!accountName || accountName === username.toLowerCase())setAccountName(e.target.value.toLowerCase().replace(/[^a-z0-9-]/g, ""));}} placeholder="Votre nom" /></label><label>Nom du compte<input value={accountName} onChange={(e) => setAccountName(e.target.value.toLowerCase().replace(/[^a-z0-9-]/g, ""))} placeholder="utilisateur" /><small>Utilisé pour le dossier personnel simulé.</small></label></div><div className="setup-passcode-fields"><div className="setup-passcode-intro"><LockKeyhole size={16}/><span><b>Code de déverrouillage</b><small>Facultatif · de 4 à 8 chiffres pour protéger cette session simulée.</small></span></div><label>Code (facultatif)<input name="setup-passcode" type="password" inputMode="numeric" autoComplete="new-password" maxLength={8} value={passcode} onChange={e=>setPasscode(e.target.value.split("").filter(ch=>ch>="0"&&ch<="9").join("").slice(0,8))} placeholder="Créer un code" /></label><label>Confirmer le code<input name="setup-passcode-confirm" type="password" inputMode="numeric" autoComplete="new-password" maxLength={8} value={passcodeConfirm} onChange={e=>setPasscodeConfirm(e.target.value.split("").filter(ch=>ch>="0"&&ch<="9").join("").slice(0,8))} placeholder="Répéter le code" /></label>{passcodeError&&<p className="setup-passcode-error" role="alert">{passcodeError}</p>}<p className="setup-footnote">Ce code est propre au simulateur dans ce navigateur. Il ne remplace pas le mot de passe Windows.</p></div>
         </div>;
       case 6:
         return <div className="setup-appearance">
