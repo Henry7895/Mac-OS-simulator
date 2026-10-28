@@ -50,6 +50,10 @@ jobs:
           node-version: 22
       - name: Install dependencies
         run: npm install
+      - name: Install Chromium for browser smoke tests
+        run: npx playwright install --with-deps chromium
+      - name: Verify first-run setup and desktop interactions
+        run: npm run test:e2e
       - name: Build site
         run: npm run build
 
