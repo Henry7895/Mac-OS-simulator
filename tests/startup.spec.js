@@ -91,3 +91,36 @@ test("a returning session can unlock, update and use its code in Settings", asyn
   await expect(page.locator(".desktop")).toBeVisible();
   expect(pageErrors, "browser runtime errors").toEqual([]);
 });
+
+test("setup language changes the displayed assistant language immediately", async ({ page }) => {
+  await page.addInitScript(() => localStorage.clear());
+  await page.goto("/?setup=1");
+  await expect(page.getByRole("heading", { name: "Choisissez votre langue" })).toBeVisible();
+  await page.getByRole("button", { name: /English/ }).click();
+  await expect(page.getByRole("heading", { name: "Choose your language" })).toBeVisible();
+  await page.getByRole("button", { name: /Spanish/ }).click();
+  await expect(page.getByRole("heading", { name: "Elige tu idioma" })).toBeVisible();
+});
+
+test("App Store can install an app and minimized windows restore instead of closing", async ({ page }) => {
+  await page.addInitScript(() => localStorage.setItem("gg-setup", "true"));
+  await page.goto("/");
+  await expect(page.locator(".lockscreen")).toBeVisible();
+  await page.locator(".lockscreen .primary").click();
+  await expect(page.locator(".desktop")).toBeVisible();
+
+  await page.locator('.dock button[title="App Store"]').click();
+  await expect(page.locator(".appwindow")).toContainText("Applications recommandées");
+  await page.locator(".store-card").filter({ hasText: "Météo" }).getByRole("button", { name: "Obtenir" }).click();
+  await expect(page.locator('.dock button[title="Météo"]')).toBeVisible();
+
+  await page.locator('.dock button[title="Finder"]').click();
+  const finder = page.locator(".appwindow").filter({ hasText: "Nouveau dossier" }).first();
+  await expect(finder).toBeVisible();
+  await page.waitForTimeout(450);
+  await finder.locator(".traffic button").nth(1).click();
+  await expect(finder).toHaveCount(1);
+  await expect(finder).not.toBeVisible();
+  await page.locator('.dock button[title="Finder"]').click();
+  await expect(finder).toBeVisible();
+});
