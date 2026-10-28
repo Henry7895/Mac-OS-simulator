@@ -244,3 +244,17 @@
 .photos-viewer{background-repeat:no-repeat!important;background-size:cover!important;background-position:center!important}
 .photos-viewer[style*="golden-hour.svg"]{background-position:center 40%!important}
 @media(max-width:850px){.photos-set-wall{font-size:8px;padding:5px 7px}.photos-set-wall button{font-size:8px;padding:6px 7px}}
+
+
+.lockscreen .locksetup {
+  margin-top: 9px;
+  padding: 8px 13px;
+  border-radius: 999px;
+  color: rgba(255,255,255,.91);
+  background: rgba(255,255,255,.14);
+  border: 1px solid rgba(255,255,255,.3);
+  font-size: 11px;
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+}
+.lockscreen .locksetup:hover { background: rgba(255,255,255,.23); }
