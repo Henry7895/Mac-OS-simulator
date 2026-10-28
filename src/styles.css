@@ -300,3 +300,220 @@
 .settings-passcode-form .passcode-status { margin:0; font-size:11px; color:#287b4c; }
 .dark .settings-passcode-form label input { background:#222630; border-color:#4a505d; color:#f1f3f8; }
 .dark .settings-passcode-form small { color:#b5bdca; }
+
+
+/* Functional Safari window: tab strip, unified address field, page surface and reload feedback. */
+.windowlayer .react-draggable[style*="visibility: hidden"] { pointer-events:none!important; }
+.dock-app i.minimized { opacity:.4; transform:scale(.8); }
+.settingsapp select { min-width:150px; padding:8px 10px; border:1px solid #d8dce5; border-radius:9px; color:#202838; background:#fff; }
+.dark .settingsapp select { color:#f5f6fa; background:#222630; border-color:#4a505d; }
+.safari-browser { display:flex; flex-direction:column; height:100%; min-height:0; background:#f5f6f9; color:#242938; }
+.safari-tabs { display:flex; align-items:center; gap:5px; min-height:33px; padding:4px 10px 0; background:linear-gradient(#eceef3,#e2e5eb); border-bottom:1px solid #d1d5df; overflow-x:auto; }
+.safari-tab { display:flex; align-items:center; gap:5px; min-width:80px; max-width:210px; padding:5px 7px 5px 10px; border:1px solid transparent; border-radius:9px 9px 0 0; background:transparent; font-size:10px; }
+.safari-tab.active { background:#fff; border-color:#dce0e7; border-bottom-color:#fff; }
+.safari-tab>button:first-child { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; flex:1; text-align:left; }
+.safari-tab .tab-close,.safari-new-tab { display:grid; place-items:center; width:20px; height:20px; border-radius:50%; background:transparent; color:#737b8a; flex-shrink:0; }
+.safari-tab .tab-close:hover,.safari-new-tab:hover { background:#d9dde6; }
+.safari-browser .browserbar { display:flex; align-items:center; gap:7px; padding:9px 12px; background:#f7f8fb; border-bottom:1px solid #dce0e7; }
+.safari-browser .browserbar>button { display:grid; place-items:center; width:28px; height:28px; border-radius:8px; background:#e7eaf0; color:#4c5668; flex-shrink:0; }
+.safari-browser .browserbar>button:disabled { opacity:.35; cursor:default; }
+.safari-browser .browserbar form { flex:1; min-width:0; display:flex; align-items:center; gap:6px; border:1px solid #d6dbe4; border-radius:11px; padding:3px 5px 3px 12px; background:white; }
+.safari-browser .browserbar input { min-width:0; width:100%; border:0; outline:0; background:transparent; color:#2b3140; font-size:11px; }
+.safari-browser .browserbar form button { display:grid; place-items:center; padding:5px 8px; color:#4e7fc5; background:transparent; }
+.safari-content { flex:1; min-height:0; position:relative; background:#fff; overflow:hidden; }
+.safari-iframe,.safari-webview { display:block; width:100%; height:100%; min-height:260px; border:0; background:#fff; }
+.safari-start { max-width:650px; margin:0 auto; padding:28px; text-align:center; }
+.safari-start-icon { display:grid; place-items:center; width:75px; height:75px; margin:0 auto 15px; border-radius:22px; background:linear-gradient(145deg,#8be3ff,#2684f3 65%,#1750b6); color:white; box-shadow:0 12px 30px #1b83db30; }
+.safari-start h1 { font-size:26px; font-weight:650; letter-spacing:-1px; color:#252b39; margin:0 0 7px; }
+.safari-start p { max-width:470px; margin:0 auto 22px; color:#747d8d; font-size:11px; line-height:1.6; }
+.safari-start .favorites { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; max-width:420px; margin:0 auto; }
+.safari-start .favorites button { display:flex; flex-direction:column; align-items:center; gap:8px; padding:12px 6px; border-radius:13px; color:#414a5b; background:#f4f6fa; border:1px solid #e3e7ef; font-size:10px; }
+.safari-start .favorites button span { display:grid; place-items:center; width:32px; height:32px; border-radius:10px; color:white; background:linear-gradient(145deg,#78baff,#2769c5); font-size:15px; font-weight:700; }
+.browser-notice { min-height:28px; display:flex; align-items:center; justify-content:space-between; gap:8px; padding:5px 10px; border-top:1px solid #e2e5ea; background:#f8f9fb; color:#7c8491; font-size:9px; }
+.browser-notice button { display:flex; align-items:center; gap:5px; padding:5px 8px; background:#e5efff; border-radius:7px; color:#1869c2; font-size:9px; white-space:nowrap; }
+.safari-progress { height:2px; overflow:hidden; background:#e5e9f1; }
+.safari-progress i { display:block; height:100%; width:36%; background:#2f87f5; animation:safari-progress 1.1s ease-in-out infinite alternate; }
+@keyframes safari-progress { from{transform:translateX(-20%);width:20%} to{transform:translateX(240%);width:50%} }
+
+/* Apple Music-inspired player with real web previews, queue controls, timeline and shared volume. */
+.music-app-shell { position:relative; display:grid; grid-template-columns:155px minmax(0,1fr); grid-template-rows:minmax(0,1fr) 78px; height:100%; min-height:0; background:#fff; color:#222633; overflow:hidden; }
+.music-sidebar { grid-column:1; grid-row:1; min-height:0; display:flex; flex-direction:column; gap:5px; padding:16px 10px; background:linear-gradient(160deg,#f4f4f7,#ececf1); border-right:1px solid #e0e1e8; }
+.music-brand { display:flex; align-items:center; gap:8px; margin-bottom:14px; padding:2px 3px; font-size:13px; }
+.music-brand-icon { display:grid; place-items:center; width:28px; height:28px; border-radius:8px; color:#fff; background:linear-gradient(145deg,#ff7687,#d5164e); }
+.music-sidebar-label { margin:9px 0 3px 4px; color:#898b96; font-size:9px; font-weight:750; text-transform:uppercase; letter-spacing:.65px; }
+.music-sidebar>button { display:flex; align-items:center; gap:7px; width:100%; padding:8px 9px; border-radius:8px; text-align:left; color:#505462; background:transparent; font-size:10px; }
+.music-sidebar>button.selected { color:#bd163f; background:#ffe5eb; font-weight:650; }
+.music-sidebar-bottom { margin-top:auto; padding:10px 4px 2px; color:#8b8e99; font-size:9px; line-height:1.5; }
+.music-main { grid-column:2; grid-row:1; min-height:0; overflow:auto; padding:18px 20px 16px; background:linear-gradient(145deg,#fff,#fff8fa); }
+.music-topbar { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+.music-topbar h2 { margin:0; color:#202431; font-size:21px; font-weight:700; letter-spacing:-.6px; }
+.music-topbar form { min-width:190px; max-width:320px; display:flex; flex:1; align-items:center; gap:7px; padding:5px 6px 5px 10px; border:1px solid #e0e1e8; border-radius:10px; background:#f5f6f8; color:#8b909c; }
+.music-topbar form input { flex:1; min-width:0; width:100%; border:0; outline:0; color:#252b37; background:transparent; font-size:10px; }
+.music-topbar form button { padding:6px 9px; border-radius:7px; color:white; background:#df234f; font-size:9px; }
+.music-feature { display:flex; gap:18px; align-items:center; margin-top:17px; padding:17px; border-radius:16px; color:#fff; background:radial-gradient(ellipse at 90% 6%,#ffb0c1 0,transparent 48%),linear-gradient(125deg,#9b0f39,#e52b58 64%,#6b204b); box-shadow:0 10px 25px #cc1e4a20; }
+.music-feature-art { position:relative; display:grid; place-items:center; width:90px; height:90px; flex-shrink:0; border-radius:18px; color:white; background:linear-gradient(145deg,#ffbdca,#fa4275 50%,#851a55); box-shadow:inset 0 1px 1px #fff8,0 8px 18px #4d081e40; }
+.music-feature-art span { position:absolute; right:7px; bottom:5px; font-size:15px; font-weight:800; opacity:.7; }
+.music-feature small { font-size:8px; font-weight:800; letter-spacing:1px; opacity:.75; }
+.music-feature h3 { margin:5px 0 6px; font-size:16px; line-height:1.15; }
+.music-feature p { max-width:390px; margin:0 0 9px; color:#ffe9ef; font-size:10px; line-height:1.5; }
+.music-feature button { display:inline-flex; align-items:center; gap:5px; margin:3px 5px 0 0; padding:7px 10px; border-radius:8px; color:#b81442; background:white; font-size:9px; font-weight:700; }
+.music-feature button.ncs-button { color:#fff; background:#ffffff26; border:1px solid #ffffff70; }
+.music-results-heading { display:flex; align-items:center; justify-content:space-between; margin:18px 0 7px; color:#303442; font-size:11px; }
+.music-results-heading span { color:#8d9099; font-size:9px; }
+.music-results { display:flex; flex-direction:column; gap:2px; }
+.music-result { display:grid; grid-template-columns:24px 36px minmax(100px,1fr) minmax(70px,.8fr) 22px; align-items:center; gap:9px; min-height:47px; padding:5px 7px; border-radius:9px; }
+.music-result:hover,.music-result.active { background:#fff0f4; }
+.track-play { display:grid; place-items:center; width:24px; height:24px; color:#c31d48; background:transparent; }
+.music-result>img { width:36px; height:36px; border-radius:6px; object-fit:cover; background:#eee; }
+.track-metadata { min-width:0; display:flex; flex-direction:column; gap:3px; text-align:left; background:transparent; }
+.track-metadata b { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:#272b37; font-size:10px; font-weight:650; }
+.track-metadata small,.track-album { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:#777d89; font-size:9px; }
+.music-result>a { display:grid; place-items:center; color:#b91c46; text-decoration:none; }
+.music-feedback { padding:10px; color:#9b2445; background:#fff0f3; border-radius:8px; font-size:10px; }
+.music-empty { display:flex; flex-direction:column; align-items:center; gap:10px; padding:25px 8px; color:#979ba5; text-align:center; font-size:10px; }
+.music-empty button { padding:7px 12px; color:#fff; background:#da234e; border-radius:9px; font-size:10px; }
+.music-legal { margin:10px 0 0; color:#999ca5; font-size:8px; line-height:1.5; }
+.music-player { grid-column:1 / -1; grid-row:2; display:grid; grid-template-columns:minmax(145px,1fr) minmax(180px,1.5fr) minmax(100px,.7fr); align-items:center; gap:15px; padding:10px 16px; border-top:1px solid #e1e2e8; background:rgba(250,250,252,.96); }
+.now-playing { min-width:0; display:flex; align-items:center; gap:8px; }
+.now-playing>img { width:42px; height:42px; object-fit:cover; border-radius:7px; background:#eee; }
+.now-playing>span { min-width:0; display:flex; flex-direction:column; gap:4px; }
+.now-playing b { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:#262a35; font-size:10px; }
+.now-playing small { color:#818590; font-size:9px; }
+.player-center { min-width:0; }
+.player-controls { display:flex; align-items:center; justify-content:center; gap:16px; margin-bottom:5px; }
+.player-controls button { display:grid; place-items:center; color:#5b5e6a; background:transparent; }
+.player-controls .player-play { width:28px; height:28px; border-radius:50%; color:white; background:#dc234e; }
+.player-controls button:disabled { opacity:.35; }
+.player-timeline { display:flex; align-items:center; gap:7px; }
+.player-timeline small { color:#888c97; font-size:8px; font-variant-numeric:tabular-nums; }
+.player-timeline input,.player-volume input { flex:1; min-width:0; accent-color:#dd234f; height:3px; }
+.player-volume { display:flex; align-items:center; gap:8px; color:#777d89; }
+
+/* Curated App Store: apps are installed into this simulator's Dock, not into Windows. */
+.appstore-shell { display:grid; grid-template-columns:150px minmax(0,1fr); height:100%; min-height:0; background:#f8f9fc; color:#252a36; }
+.appstore-sidebar { display:flex; flex-direction:column; gap:7px; padding:17px 10px; background:#eef0f5; border-right:1px solid #dde1e8; }
+.store-logo { display:flex; align-items:center; gap:8px; margin:2px 3px 18px; color:#397ce6; font-size:13px; }
+.appstore-sidebar>button { display:flex; gap:8px; align-items:center; padding:8px 10px; text-align:left; color:#596171; border-radius:8px; background:transparent; font-size:10px; }
+.appstore-sidebar>button.selected { color:#2267d2; background:#dce9ff; font-weight:700; }
+.store-sidebar-note { margin-top:auto; padding:8px 3px; color:#888f9c; font-size:9px; line-height:1.5; }
+.appstore-main { min-height:0; overflow:auto; padding:20px; }
+.appstore-header { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+.appstore-header small { color:#7f8999; font-size:8px; letter-spacing:1px; font-weight:800; }
+.appstore-header h2 { margin:3px 0 0; font-size:23px; letter-spacing:-.8px; }
+.appstore-header label { display:flex; align-items:center; gap:7px; width:min(250px,100%); padding:8px 10px; border-radius:9px; background:#eceff5; color:#8b92a0; }
+.appstore-header input { min-width:0; width:100%; border:0; outline:0; background:transparent; color:#242a38; font-size:10px; }
+.store-feature { display:flex; align-items:center; justify-content:space-between; gap:14px; margin:18px 0; padding:20px; border-radius:17px; color:white; background:linear-gradient(120deg,#5f83d9,#bba3f4 54%,#f0bad1); overflow:hidden; }
+.store-feature small { font-size:8px; letter-spacing:1.2px; font-weight:800; opacity:.75; }
+.store-feature h3 { margin:5px 0 7px; font-size:18px; letter-spacing:-.5px; }
+.store-feature p { max-width:330px; margin:0; font-size:10px; line-height:1.5; color:#f8f7ff; }
+.store-feature-art { display:grid; place-items:center; width:76px; height:76px; flex-shrink:0; color:white; border-radius:20px; background:#ffffff38; }
+.store-section-title { margin:18px 0 10px; font-size:13px; }
+.store-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+.store-card { display:grid; grid-template-columns:42px minmax(0,1fr); gap:10px; padding:12px; border:1px solid #e0e4ec; border-radius:13px; background:#fff; }
+.store-app-icon { display:grid; place-items:center; width:42px; height:42px; border-radius:12px; color:white; box-shadow:inset 0 1px #ffffff8a; }
+.store-app-info { min-width:0; }
+.store-app-info>b { font-size:11px; }
+.store-app-info>p { margin:4px 0; color:#707887; font-size:9px; line-height:1.45; }
+.store-app-info>small { color:#989eaa; font-size:8px; }
+.store-app-actions { grid-column:2; display:flex; gap:6px; align-items:center; }
+.store-app-actions button { padding:6px 12px; border-radius:999px; color:#2775dc; background:#eaf2ff; font-weight:750; font-size:9px; }
+.store-app-actions .store-remove { color:#7c838e; background:#f1f2f5; }
+
+/* The extra apps are intentionally local-first and use public data services only where needed. */
+.weather-app { height:100%; min-height:0; padding:22px; color:#262c3a; background:radial-gradient(ellipse at 80% 0%,#a8dfff,transparent 48%),linear-gradient(145deg,#f2f8ff,#dceaff); overflow:auto; }
+.weather-app>header { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.weather-app h2 { margin:0; font-size:21px; }
+.weather-app header form { display:flex; gap:5px; }
+.weather-app input { min-width:0; width:130px; padding:8px 10px; background:#ffffffb8; border:1px solid #ffffffc9; border-radius:9px; color:#25344b; font-size:10px; }
+.weather-app header button,.weather-placeholder button { display:flex; align-items:center; gap:5px; padding:8px 11px; border-radius:9px; background:#2d7de4; color:white; font-size:10px; }
+.weather-current { max-width:410px; margin:28px auto 0; padding:23px; border:1px solid #ffffffb5; border-radius:22px; background:#ffffff8c; backdrop-filter:blur(20px); text-align:center; }
+.weather-current>small { color:#6b8299; font-size:12px; }
+.weather-temp { margin:8px 0; color:#1a4c89; font-size:76px; font-weight:200; letter-spacing:-5px; }
+.weather-current>b { color:#577591; font-size:12px; }
+.weather-stats { display:flex; justify-content:space-around; gap:12px; margin-top:24px; padding-top:15px; border-top:1px solid #9bbad64d; color:#667b90; font-size:10px; }
+.weather-stats span { display:flex; flex-direction:column; gap:5px; }
+.weather-stats b { color:#244c78; }
+.weather-placeholder { display:flex; flex-direction:column; align-items:center; gap:9px; max-width:360px; margin:40px auto; text-align:center; color:#5482b3; }
+.weather-placeholder h3 { margin:0; color:#294a6b; }
+.weather-placeholder p { color:#617c99; font-size:11px; line-height:1.5; }
+.voice-memos-app { height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; color:#272d3b; background:linear-gradient(150deg,#fff5f5,#f6e5e8); text-align:center; padding:18px; }
+.voice-memos-orb { display:grid; place-items:center; width:90px; height:90px; border-radius:50%; color:white; background:linear-gradient(145deg,#ff8f99,#d3214d); box-shadow:0 12px 25px #b8274b2b,inset 0 1px #ffffff90; }
+.voice-memos-app h2 { margin:0; font-size:21px; }
+.voice-memos-app>p { margin:0; font-size:11px; color:#777b88; }
+.recording-indicator { display:flex; align-items:center; gap:7px; color:#898d98; font-size:10px; }
+.recording-indicator i { width:8px; height:8px; border-radius:50%; background:#a7abb3; }
+.recording-indicator.active i { background:#e12443; box-shadow:0 0 0 5px #e1244320; animation:record-pulse 1s infinite alternate; }
+@keyframes record-pulse { to{opacity:.45;transform:scale(.8)} }
+.record-start,.record-stop { padding:10px 16px; border-radius:999px; color:white; background:#d82248; font-size:11px; font-weight:700; }
+.record-stop { background:#555e70; }
+.recording-result { display:flex; flex-direction:column; align-items:center; gap:8px; }
+.recording-result audio { width:min(350px,80vw); height:32px; }
+.recording-result a { color:#bd2344; font-size:10px; }
+.activity-app { height:100%; overflow:auto; padding:19px; color:#29303c; background:#fafbfe; }
+.activity-app>header { display:flex; align-items:center; gap:10px; color:#4784de; }
+.activity-app h2 { margin:0; color:#252b36; font-size:17px; }
+.activity-app header p { margin:3px 0 0; color:#828a99; font-size:10px; }
+.activity-stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:9px; margin:18px 0; }
+.activity-stats article { display:flex; flex-direction:column; gap:5px; padding:12px; border:1px solid #e0e5ed; border-radius:11px; background:white; }
+.activity-stats small { color:#838b99; font-size:9px; }
+.activity-stats b { font-size:24px; font-weight:350; color:#3a78d5; }
+.activity-app table { width:100%; border-collapse:collapse; font-size:10px; }
+.activity-app th,.activity-app td { padding:9px; border-bottom:1px solid #e4e7ee; text-align:left; }
+.activity-app th { color:#878d9a; font-size:9px; }
+.activity-app>p { margin-top:14px; color:#8d929c; font-size:9px; }
+.freeform-app { height:100%; display:flex; flex-direction:column; background:#f4f0e9; color:#292e38; }
+.freeform-app>header { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:13px 16px; background:#f9f7f2; border-bottom:1px solid #e2ddd3; }
+.freeform-app>header>div { display:flex; align-items:center; gap:7px; }
+.freeform-app h2 { margin:0; font-size:15px; }
+.freeform-app>header button,.freeform-empty button { padding:8px 11px; border-radius:9px; color:white; background:#477be1; font-size:10px; }
+.freeform-board { position:relative; flex:1; display:flex; flex-wrap:wrap; align-content:flex-start; align-items:flex-start; gap:15px; padding:20px; overflow:auto; background-image:radial-gradient(#d9d4ca 0.8px,transparent .8px); background-size:18px 18px; }
+.freeform-board>article { position:relative; width:150px; min-height:125px; padding:15px 12px; border-radius:4px 4px 14px 4px; box-shadow:0 6px 14px #40362916; }
+.freeform-board>article p { margin:0; white-space:pre-wrap; overflow-wrap:anywhere; color:#3d4049; font-size:11px; }
+.freeform-board>article button { position:absolute; top:4px; right:4px; display:grid; place-items:center; color:#6a6f78; background:transparent; }
+.freeform-empty { width:100%; display:flex; flex-direction:column; align-items:center; gap:10px; margin:auto; color:#9b988f; text-align:center; font-size:11px; }
+.books-app { display:grid; grid-template-columns:145px minmax(0,1fr); height:100%; color:#29303d; background:#fff; }
+.books-app>aside { display:flex; flex-direction:column; gap:10px; padding:18px 12px; background:#f1f2f6; border-right:1px solid #e2e3e8; }
+.books-app>aside>svg { color:#dc7a4e; }
+.books-app>aside h2 { margin:0; font-size:18px; }
+.books-app>aside button { padding:8px; text-align:left; border-radius:8px; background:#e1e8f7; color:#316ecb; font-size:10px; }
+.books-app>aside small { margin-top:auto; color:#9297a1; font-size:9px; }
+.books-app>section { min-width:0; padding:22px; overflow:auto; }
+.books-app>section h2 { margin:0 0 14px; font-size:19px; }
+.books-app>section p { max-width:520px; color:#6f7582; font-size:13px; line-height:1.9; white-space:pre-line; }
+.book-shelf { display:grid; grid-template-columns:repeat(auto-fit,minmax(105px,1fr)); gap:13px; }
+.book-shelf>button { display:flex; flex-direction:column; align-items:flex-start; gap:8px; background:transparent; text-align:left; }
+.book-cover { display:grid; place-items:center; width:100%; height:135px; border-radius:5px 9px 9px 5px; color:#fff; box-shadow:inset 4px 0 #00000014,0 5px 12px #00000013; }
+.book-cover-0 { background:linear-gradient(145deg,#629fbd,#254d7b); }
+.book-cover-1 { background:linear-gradient(145deg,#f0c86d,#d87646); }
+.book-cover-2 { background:linear-gradient(145deg,#5a7a6c,#23473e); }
+.book-shelf b { font-size:10px; line-height:1.35; }
+.book-shelf small { color:#8a909b; font-size:9px; }
+.clock-app { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; height:100%; color:#fff; text-align:center; background:radial-gradient(ellipse at 40% 20%,#4c6c9b,#14213c 70%); }
+.clock-face { display:flex; align-items:center; flex-direction:column; gap:10px; }
+.clock-face>span { font-size:45px; font-weight:200; letter-spacing:-1.5px; font-variant-numeric:tabular-nums; }
+.clock-app h2 { font-size:15px; font-weight:500; }
+.clock-app p { color:#b9c6db; font-size:10px; }
+@media(max-width:720px) {
+ .music-app-shell { grid-template-columns:96px minmax(0,1fr); }
+ .music-sidebar { padding:12px 6px; }
+ .music-sidebar>button { padding:7px 5px; font-size:9px; }
+ .music-main { padding:12px; }
+ .music-feature { gap:10px; padding:12px; }
+ .music-feature-art { width:65px; height:65px; }
+ .music-feature h3 { font-size:13px; }
+ .music-feature p { font-size:9px; }
+ .music-result { grid-template-columns:22px 30px minmax(70px,1fr) 20px; gap:5px; }
+ .music-result>img { width:30px; height:30px; }
+ .music-result .track-album { display:none; }
+ .music-player { grid-template-columns:minmax(85px,1fr) minmax(110px,1.3fr); gap:8px; padding:7px; }
+ .player-volume { display:none; }
+ .store-grid { grid-template-columns:1fr; }
+ .appstore-shell { grid-template-columns:100px minmax(0,1fr); }
+ .appstore-sidebar { padding:12px 6px; }
+ .store-logo { font-size:10px; }
+ .store-feature { padding:12px; }
+ .store-feature-art { width:50px; height:50px; }
+ .store-feature h3 { font-size:14px; }
+ .books-app { grid-template-columns:100px minmax(0,1fr); }
+ .book-cover { height:100px; }
+}
