@@ -39,7 +39,7 @@ export default function MusicApp({locale="fr",volume=65,playing:controlledPlayin
  };
  const selectPreview=item=>{setPreviewTrack(item);setTime(0);setDuration(30);setLocalPlaying(true);setMode("preview");setFullPlaying(false);onPlaybackChange?.(true)};
  const selectFull=item=>{setFullTrack(item);setFullPlaying(false);setTime(0);setDuration(0);setYoutubeReady(false);setMode("full");setLocalPlaying(false);onPlaybackChange?.(false)};
- const filteredNcs=useMemo(()=>NCS_TRACKS.filter(item=>(item.title+" "+item.artist+" "+item.genre).toLocaleLowerCase().includes(query.toLocaleLowerCase().trim())),[query]);
+ const filteredNcs=useMemo(()=>{const normalized=query.toLocaleLowerCase().trim();if(!normalized||normalized==="ncs")return NCS_TRACKS;return NCS_TRACKS.filter(item=>(item.title+" "+item.artist+" "+item.genre).toLocaleLowerCase().includes(normalized))},[query]);
  useEffect(()=>{
   const audio=audioRef.current;if(!audio)return;
   audio.volume=Math.max(0,Math.min(1,volume/100));
