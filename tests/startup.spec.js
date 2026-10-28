@@ -157,9 +157,10 @@ test("creative software cards link to official downloads and identify the creato
   await page.locator(".lockscreen .primary").click();
   await page.locator('.dock button[title="App Store"]').click();
   const store = page.locator(".appwindow");
-  for (const name of ["ArtCraft", "PhotoCraft", "FilmCraft", "LightCraft"]) {
-    const card = store.locator(".creative-card").filter({ hasText: name });
-    await expect(card).toBeVisible();
+  const names = ["ArtCraft", "PhotoCraft", "FilmCraft", "LightCraft"];
+  for (const [index, name] of names.entries()) {
+    const card = store.locator(".creative-card").nth(index);
+    await expect(card.locator(".creative-card-title h4")).toHaveText(name);
     await expect(card).toContainText("ArtCraft Team et contributeurs");
     await expect(card.getByRole("button", { name: /Voir les téléchargements/ })).toBeVisible();
     await expect(card.getByRole("button", { name: /Code source/ })).toBeVisible();
