@@ -17,6 +17,9 @@ test("first-run setup reaches the desktop without a runtime error", async ({ pag
 
   await expect(page.locator(".lockscreen")).toBeVisible({ timeout: 10_000 });
   await page.locator(".lockscreen .primary").click();
+  await page.waitForTimeout(300);
+  console.log("AFTER UNLOCK BODY:", await page.locator("body").innerText());
+  console.log("AFTER UNLOCK PAGE ERRORS:", JSON.stringify(pageErrors));
   await expect(page.locator(".desktop")).toBeVisible();
   await expect(page.locator(".photos-window")).toBeVisible();
   await expect(page.locator(".control-panel-macos")).toBeVisible();
