@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+<defs>
+ <linearGradient id="sky" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#1593f5"/><stop offset=".52" stop-color="#55b8fa"/><stop offset="1" stop-color="#e7edda"/></linearGradient>
+ <linearGradient id="dune" x1="0" y1="0" x2=".2" y2="1"><stop stop-color="#fff8d7"/><stop offset="1" stop-color="#f8df9a"/></linearGradient>
+ <linearGradient id="fabric" x1="0" y1="0" x2="1" y2=".8"><stop stop-color="#fffce2"/><stop offset=".32" stop-color="#fff3a0"/><stop offset=".6" stop-color="#f7c938"/><stop offset=".88" stop-color="#fff9d8"/><stop offset="1" stop-color="#f2b922"/></linearGradient>
+ <linearGradient id="top" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#fffef0"/><stop offset="1" stop-color="#e3c783"/></linearGradient>
+ <linearGradient id="skirt" x1="0" y1="0" x2="1" y2=".5"><stop stop-color="#bd6c0b"/><stop offset=".2" stop-color="#ffb21f"/><stop offset=".45" stop-color="#f98d04"/><stop offset=".7" stop-color="#ffd650"/><stop offset="1" stop-color="#bc5f02"/></linearGradient>
+ <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9b4d2c"/><stop offset=".48" stop-color="#6f321e"/><stop offset=".8" stop-color="#ad5c36"/><stop offset="1" stop-color="#4b241b"/></linearGradient>
+ <linearGradient id="shadow" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#000" stop-opacity=".23"/><stop offset=".45" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".16"/></linearGradient>
+ <pattern id="weave" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M0 0L16 16M16 0L0 16" stroke="#9b5806" stroke-opacity=".18" stroke-width="1.6"/><path d="M8 0V16M0 8H16" stroke="#fff2ac" stroke-opacity=".28" stroke-width="1"/></pattern>
+ <filter id="soft"><feGaussianBlur stdDeviation="18"/></filter>
+</defs>
+<rect width="1600" height="1000" fill="url(#sky)"/>
+<circle cx="1310" cy="115" r="76" fill="#fff4c5" opacity=".5" filter="url(#soft)"/>
+<path d="M0 550C230 465 352 464 530 510C705 556 845 623 1060 593C1264 565 1429 474 1600 470V1000H0Z" fill="#d2e0c8" opacity=".55"/>
+<path d="M0 744C248 631 419 626 604 687C815 756 967 733 1147 661C1326 589 1459 558 1600 566V1000H0Z" fill="url(#dune)"/>
+<path d="M0 1000V830C183 788 316 786 450 838C588 891 730 920 897 895C1090 866 1319 777 1600 785V1000Z" fill="#ebbd4d"/>
+<path d="M74 0C251 83 346 192 451 338C532 451 631 523 769 551C927 583 1046 524 1178 398C1318 264 1442 135 1600 112V0Z" fill="#bceaff" opacity=".6"/>
+<!-- flowing golden cloth behind the subject -->
+<path d="M285 170C450 126 546 180 664 262C808 363 900 416 1049 389C1208 360 1333 255 1469 185C1514 162 1559 147 1600 145L1600 275C1448 302 1341 400 1208 463C1033 546 887 542 740 468C614 404 554 305 438 261C367 234 322 232 285 245Z" fill="url(#fabric)"/>
+<path d="M275 168C450 124 544 181 665 262C807 362 901 416 1050 389C1210 359 1342 250 1472 184C1526 157 1561 148 1600 145" stroke="#fffde7" stroke-width="9" fill="none" opacity=".78"/>
+<path d="M299 198C417 181 512 241 613 330C728 430 838 487 985 481C1165 472 1358 325 1516 234" stroke="#e5a617" stroke-width="4" fill="none" opacity=".56"/>
+<!-- left edge of the fabric held outward -->
+<path d="M317 195C281 321 268 450 314 567C363 692 480 785 601 864C523 735 474 617 453 495C433 376 412 267 317 195Z" fill="url(#fabric)"/>
+<path d="M316 200C291 352 299 487 354 608C395 700 477 781 600 864" fill="none" stroke="#fffce5" stroke-width="9" opacity=".8"/>
+<!-- right flowing fabric -->
+<path d="M978 404C1120 393 1242 358 1370 302C1455 264 1527 235 1600 223V348C1505 364 1420 419 1322 462C1193 519 1084 544 976 519Z" fill="url(#fabric)"/>
+<!-- legs and golden pleated skirt -->
+<path d="M680 628C739 603 841 603 903 633C938 718 984 825 1022 1000H601C636 845 662 718 680 628Z" fill="url(#skirt)"/>
+<path d="M681 642C734 738 734 859 710 1000M737 625C785 745 798 870 789 1000M806 626C857 757 870 862 886 1000M859 634C917 756 950 877 979 1000" stroke="#ffe180" stroke-width="14" opacity=".65" fill="none"/>
+<path d="M680 630C739 603 841 603 903 633C938 718 984 825 1022 1000H601C636 845 662 718 680 630Z" fill="url(#weave)" opacity=".6"/>
+<!-- neck -->
+<path d="M742 319C744 351 729 382 711 398C735 433 800 445 833 406C807 374 807 347 816 322Z" fill="url(#skin)"/>
+<!-- head -->
+<path d="M710 218C712 167 759 145 806 166C845 183 858 224 840 268C826 303 801 331 772 328C740 325 714 281 710 218Z" fill="url(#skin)"/>
+<!-- hair silhouette and bantu knots -->
+<g fill="#17151b">
+ <path d="M704 226C695 192 709 153 742 145C760 116 806 128 820 153C850 163 862 194 852 222L832 252L815 215L783 195L755 216L736 251Z"/>
+ <circle cx="709" cy="168" r="16"/><circle cx="734" cy="143" r="17"/><circle cx="762" cy="136" r="15"/><circle cx="790" cy="143" r="18"/><circle cx="816" cy="162" r="14"/><circle cx="837" cy="190" r="13"/><circle cx="717" cy="197" r="12"/>
+ <path d="M715 190C731 163 751 164 773 179C792 193 815 190 835 209L822 237L797 218L774 212L751 229L728 225Z"/>
+</g>
+<!-- face highlights -->
+<path d="M742 226C756 238 767 239 780 231" stroke="#e3a06d" stroke-width="3" stroke-linecap="round" fill="none" opacity=".65"/>
+<path d="M791 227L803 222" stroke="#2c1713" stroke-width="3" stroke-linecap="round"/>
+<path d="M749 224L760 222" stroke="#2a1712" stroke-width="3" stroke-linecap="round"/>
+<path d="M773 241C779 248 789 247 794 240" stroke="#502019" stroke-width="3" stroke-linecap="round" fill="none"/>
+<!-- arms extended -->
+<path d="M715 408C653 374 605 336 553 298C510 266 466 240 414 229C393 225 378 215 374 199C368 181 386 169 402 181C454 218 496 224 545 252C604 284 655 318 730 345Z" fill="url(#skin)"/>
+<path d="M826 404C881 394 935 376 983 351C1042 322 1092 287 1142 263C1167 251 1180 239 1187 219C1192 201 1210 197 1219 212C1227 225 1216 246 1203 261C1161 308 1120 345 1070 384C1017 426 942 460 858 471Z" fill="url(#skin)"/>
+<!-- sleeve / blouse -->
+<path d="M703 385C737 363 773 357 810 368C842 378 860 399 869 436L901 603C855 635 749 646 657 601L689 438C692 415 695 399 703 385Z" fill="url(#top)"/>
+<path d="M707 390C735 404 758 428 775 463C793 430 824 399 844 393" stroke="#d4bb83" stroke-width="4" opacity=".7" fill="none"/>
+<path d="M702 440C735 463 751 506 754 549M850 433C825 464 812 514 816 558" stroke="#fff" stroke-width="11" opacity=".56" fill="none"/>
+<path d="M661 594C728 621 832 625 902 594L913 632C837 662 722 657 646 627Z" fill="#f0d9a1"/>
+<!-- hands with fine fingers -->
+<path d="M382 196L367 185M385 204L365 202M389 211L374 220M1178 221L1190 203M1181 227L1201 216M1179 233L1195 236" stroke="#6e321f" stroke-width="6" stroke-linecap="round"/>
+<!-- cloth shadows and foreground light -->
+<path d="M0 0H1600V1000H0Z" fill="url(#shadow)" opacity=".33"/>
+<path d="M0 940C260 870 428 865 580 912" stroke="#fff6cf" stroke-width="13" opacity=".25" fill="none"/>
+</svg>
