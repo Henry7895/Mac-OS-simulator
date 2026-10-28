@@ -137,7 +137,7 @@ test("Music defaults to full-length official NCS playback and isolates 30-second
   await expect(page.locator(".desktop")).toBeVisible();
 
   await page.locator('.dock button[title="Musique"]').click();
-  const music = page.locator(".appwindow").filter({ hasText: "NOCOPYRIGHTSOUNDS" });
+  const music = page.locator(".music-app-shell");
   await expect(music.locator(".youtube-player-shell iframe")).toHaveAttribute("src", /youtube-nocookie.com\/embed\/mZhuH_qeRRU/);
   await expect(music).toContainText("Le lecteur officiel YouTube diffuse la vidéo complète");
   await expect(music.locator(".music-audio-host")).toHaveCSS("display", "none");
