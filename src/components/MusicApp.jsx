@@ -4,7 +4,9 @@ import {localizeTree} from "../i18n.js";
 
 export default function MusicApp({locale="fr",volume=65,playing:controlledPlaying,onVolumeChange,onPlaybackChange}) {
  const audioRef=useRef(null);
- const [query,setQuery]=useState("NCS"),[results,setResults]=useState([]),[track,setTrack]=useState(null),[localPlaying,setLocalPlaying]=useState(false),[loading,setLoading]=useState(false),[error,setError]=useState(""),[time,setTime]=useState(0),[duration,setDuration]=useState(30);\n const playing=typeof controlledPlaying==="boolean"?controlledPlaying:localPlaying;\n const setPlaying=(value)=>{const next=typeof value==="function"?value(playing):value;if(typeof controlledPlaying!=="boolean")setLocalPlaying(next);onPlaybackChange?.(next);};
+ const [query,setQuery]=useState("NCS"),[results,setResults]=useState([]),[track,setTrack]=useState(null),[localPlaying,setLocalPlaying]=useState(false),[loading,setLoading]=useState(false),[error,setError]=useState(""),[time,setTime]=useState(0),[duration,setDuration]=useState(30);
+ const playing=typeof controlledPlaying==="boolean"?controlledPlaying:localPlaying;
+ const setPlaying=(value)=>{const next=typeof value==="function"?value(playing):value;if(typeof controlledPlaying!=="boolean")setLocalPlaying(next);onPlaybackChange?.(next);};
  const search=async(term)=>{
   const q=String(term||"NCS").trim()||"NCS";setQuery(q);setLoading(true);setError("");
   try{const response=await fetch("https://itunes.apple.com/search?term="+encodeURIComponent(q)+"&entity=song&limit=24");if(!response.ok)throw new Error("catalog unavailable");const data=await response.json();const list=(data.results||[]).filter(item=>item.previewUrl).map(item=>({id:item.trackId,title:item.trackName,artist:item.artistName,album:item.collectionName,artwork:item.artworkUrl100?.replace("100x100bb","400x400bb"),previewUrl:item.previewUrl,url:item.trackViewUrl}));setResults(list);if(!list.length)setError("Aucun résultat avec aperçu disponible. Essaie un autre titre.");}
