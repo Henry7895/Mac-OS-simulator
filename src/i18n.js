@@ -12,6 +12,94 @@ const ES = {
 const DE={"Choisissez votre langue":"Sprache auswählen","Choisissez votre pays ou région":"Land oder Region auswählen","L’accessibilité pour tous":"Barrierefreiheit für alle","Données et confidentialité":"Daten und Datenschutz","Créez votre compte":"Account erstellen","Choisissez votre apparence":"Erscheinungsbild auswählen","Tout est prêt.":"Alles ist bereit.","ASSISTANT DE CONFIGURATION":"EINRICHTUNGSASSISTENT","Continuer":"Weiter","Retour":"Zurück","Démarrer la session":"Sitzung starten","Français":"Französisch","English":"Englisch","Español":"Spanisch","Italiano":"Italienisch","Fichier":"Ablage","Édition":"Bearbeiten","Présentation":"Darstellung","Fenêtre":"Fenster","Aide":"Hilfe","À propos de ce Mac":"Über diesen Mac","Réglages Système":"Systemeinstellungen","Centre de contrôle":"Kontrollzentrum","Rechercher ou saisir une adresse":"Website-Adresse eingeben","Bienvenue sur Safari":"Willkommen bei Safari","Ouvrir dans le navigateur externe":"Im externen Browser öffnen","Nouvel onglet":"Neuer Tab","Page de démarrage":"Startseite","Actualiser":"Neu laden","Précédent":"Zurück","Suivant":"Weiter","À écouter":"Jetzt hören","Explorer":"Entdecken","Bibliothèque":"Mediathek","Résultats de recherche":"Suchergebnisse","Découvrir":"Entdecken","Applications":"Apps","Obtenir":"Laden","Ouvrir":"Öffnen","Sécurité":"Sicherheit","Langue et région":"Sprache & Region","Langue de l’interface":"Oberflächensprache","Apparence":"Erscheinungsbild","Son":"Ton","Général":"Allgemein","Enregistrer":"Sichern","Nouveau dossier":"Neuer Ordner","Nouveau fichier":"Neue Datei","Documents":"Dokumente","Téléchargements":"Downloads","Bureau":"Schreibtisch","Nouvelle note":"Neue Notiz","Sans titre":"Ohne Titel"};
 const IT={"Choisissez votre langue":"Scegli la lingua","Choisissez votre pays ou région":"Scegli il paese o la regione","L’accessibilité pour tous":"Accessibilità per tutti","Données et confidentialité":"Dati e privacy","Créez votre compte":"Crea il tuo account","Choisissez votre apparence":"Scegli l’aspetto","Tout est prêt.":"È tutto pronto.","ASSISTANT DE CONFIGURATION":"ASSISTENTE DI CONFIGURAZIONE","Continuer":"Continua","Retour":"Indietro","Démarrer la session":"Avvia sessione","Français":"Francese","English":"Inglese","Español":"Spagnolo","Fichier":"File","Édition":"Modifica","Présentation":"Vista","Fenêtre":"Finestra","Aide":"Aiuto","À propos de ce Mac":"Informazioni su questo Mac","Réglages Système":"Impostazioni di Sistema","Centre de contrôle":"Centro di Controllo","Rechercher ou saisir une adresse":"Cerca o inserisci un indirizzo","Bienvenue sur Safari":"Benvenuto in Safari","Ouvrir dans le navigateur externe":"Apri nel browser esterno","Nouvel onglet":"Nuova scheda","Page de démarrage":"Pagina iniziale","Actualiser":"Ricarica","Précédent":"Indietro","Suivant":"Avanti","À écouter":"Ascolta ora","Explorer":"Esplora","Bibliothèque":"Libreria","Résultats de recherche":"Risultati di ricerca","Découvrir":"Scopri","Applications":"App","Obtenir":"Ottieni","Ouvrir":"Apri","Sécurité":"Sicurezza","Langue et région":"Lingua e zona","Langue de l’interface":"Lingua dell’interfaccia","Apparence":"Aspetto","Son":"Suono","Général":"Generali","Enregistrer":"Salva","Nouveau dossier":"Nuova cartella","Nouveau fichier":"Nuovo file","Documents":"Documenti","Téléchargements":"Download","Bureau":"Scrivania","Nouvelle note":"Nuova nota","Sans titre":"Senza titolo"};
 const JA={"Choisissez votre langue":"言語を選択","Choisissez votre pays ou région":"国または地域を選択","L’accessibilité pour tous":"アクセシビリティ","Données et confidentialité":"データとプライバシー","Créez votre compte":"アカウントを作成","Choisissez votre apparence":"外観を選択","Tout est prêt.":"準備ができました","ASSISTANT DE CONFIGURATION":"セットアップアシスタント","Continuer":"続ける","Retour":"戻る","Démarrer la session":"セッションを開始","Français":"フランス語","English":"英語","Español":"スペイン語","Fichier":"ファイル","Édition":"編集","Présentation":"表示","Fenêtre":"ウインドウ","Aide":"ヘルプ","À propos de ce Mac":"このMacについて","Réglages Système":"システム設定","Centre de contrôle":"コントロールセンター","Rechercher ou saisir une adresse":"アドレスを検索または入力","Bienvenue sur Safari":"Safari へようこそ","Ouvrir dans le navigateur externe":"外部ブラウザーで開く","Nouvel onglet":"新規タブ","Page de démarrage":"スタートページ","Actualiser":"再読み込み","Précédent":"戻る","Suivant":"進む","À écouter":"今すぐ聴く","Explorer":"見つける","Bibliothèque":"ライブラリ","Résultats de recherche":"検索結果","Découvrir":"見つける","Applications":"アプリ","Obtenir":"入手","Ouvrir":"開く","Sécurité":"セキュリティ","Langue et région":"言語と地域","Langue de l’interface":"インターフェイスの言語","Apparence":"外観","Son":"サウンド","Général":"一般","Enregistrer":"保存","Nouveau dossier":"新規フォルダ","Nouveau fichier":"新規ファイル","Documents":"書類","Téléchargements":"ダウンロード","Bureau":"デスクトップ","Nouvelle note":"新規メモ","Sans titre":"名称未設定"};
+
+Object.assign(EN, {
+ "Le fond sélectionné sera utilisé sur le bureau et l’écran verrouillé.":"The selected wallpaper appears on the desktop and lock screen.",
+ "Les aperçus sont fournis par l’iTunes Store.":"Previews are provided by the iTunes Store.",
+ "Découvrir NCS":"Discover NCS","Titres recherchés":"Searched tracks","Des outils pour votre bureau":"Tools for your desktop",
+ "Ajoute des apps au Dock et lance-les comme les autres applications.":"Add apps to the Dock and launch them like other applications.",
+ "EN VEDETTE":"FEATURED","Les installations sont simulées et sauvegardées localement.":"Installations are simulated and saved locally.",
+ "Consulte la météo d’une ville.":"Check a city's weather.","Enregistre du son avec ton microphone.":"Record audio with your microphone.",
+ "Observe les fenêtres de la session simulée.":"Inspect simulated session windows.","Crée un tableau de notes local.":"Create a local note board.",
+ "Une petite bibliothèque de lecture.":"A small reading library.","Horloge locale et fuseaux horaires simulés.":"Local clock and simulated time zones.",
+ "Tapez":"Type","pour voir les commandes disponibles.":"to see the available commands.","Commande inconnue":"Unknown command",
+ "Ouvrir les applications associées":"Open related applications","Cette application fait partie de la session Golden Gate.":"This application is part of the Golden Gate session.",
+ "Mode sombre":"Dark mode","Les applications ouvertes apparaissent dans le Dock.":"Open applications appear in the Dock.",
+ "Favoris":"Favorites","Répertoire simulé":"Simulated directory","Dossier créé":"Folder created","Fichier créé":"File created","Fichier introuvable":"File not found",
+ "Vider la corbeille":"Empty Trash","Restaurer":"Restore","Événement du":"Event for","Événement(s) enregistré(s). Cliquez sur un jour pour en ajouter.":"saved event(s). Select a day to add one.",
+ "Volume":"Volume","Luminosité":"Brightness","Saisis ton code de déverrouillage":"Enter your unlock passcode","Nom du profil":"Profile name",
+ "Nouveau fichier.txt":"New file.txt","Nouveau dossier":"New folder","Fichier":"File","Réduire":"Minimize","Agrandir":"Maximize","Fermer":"Close",
+ "Bibliothèque":"Library","Documents":"Documents","Téléchargements":"Downloads","Images":"Pictures","Applications":"Applications","Bureau":"Desktop",
+ "Nouvelle note":"New note","Commencez à écrire…":"Start writing…","Commence à écrire…":"Start writing…","Sans titre":"Untitled",
+ "Lancer":"Launch","Installé dans ce simulateur.":"Installed in this simulator.","Application gratuite":"Free app",
+ "Des pages qui interdisent l’intégration peuvent être ouvertes dans le navigateur externe.":"Websites that block embedding can be opened in the external browser.",
+ "Certaines pages empêchent leur affichage dans une fenêtre intégrée.":"Some websites prevent display in an embedded window.",
+ "Les statistiques système sont simulées : aucune donnée de Windows n’est lue.":"System statistics are simulated; no Windows data is read.",
+ "Enregistrement en cours…":"Recording…","Enregistrement prêt à écouter ou télécharger.":"Recording ready to play or download.",
+ "Autorise l’accès au microphone pour enregistrer.":"Allow microphone access to record.","L’enregistrement audio n’est pas disponible dans ce navigateur.":"Audio recording is not available in this browser.",
+ "Charger la météo":"Load weather","Météo actuelle":"Current weather","Impossible de récupérer la météo. Vérifie la ville ou ta connexion.":"Could not load weather. Check the city or your connection.",
+ "Ciel dégagé":"Clear sky","Partiellement nuageux":"Partly cloudy","Nuageux":"Cloudy","Pluie":"Rain","Neige":"Snow","Conditions variables":"Variable conditions",
+ "Humidité":"Humidity","Vent":"Wind","Commencer l’enregistrement":"Start recording","Arrêter l’enregistrement":"Stop recording","Télécharger le mémo":"Download recording",
+ "Fenêtres ouvertes":"Open windows","Fenêtres réduites":"Minimized windows","Applications disponibles":"Available apps","État de la session simulée":"Simulated session status",
+ "En cours":"Running","Réduite":"Minimized","Ajouter une note":"Add a note","Supprimer la note":"Delete note",
+ "Ton tableau est vide.":"Your board is empty.","Créer la première note":"Create the first note","Lire un extrait":"Read an excerpt","Extraits de démonstration":"Sample excerpts",
+ "Horloge locale du système · actualisation en direct":"Local system clock · live update",
+ "Rechercher des morceaux, artistes ou albums":"Search songs, artists or albums","Aucun morceau sélectionné":"No track selected",
+ "Catalogue indisponible. Vérifie ta connexion Internet.":"Music catalogue unavailable. Check your internet connection.",
+ "Les morceaux complets sont lus par le service officiel.":"Full tracks are played by the official service.",
+ "Le code actuel est incorrect.":"The current passcode is incorrect.","Code de déverrouillage enregistré.":"Unlock passcode saved.",
+ "Code de déverrouillage supprimé.":"Unlock passcode removed.","Saisis un nouveau code de 4 à 8 chiffres.":"Enter a new 4–8 digit passcode."
+});
+Object.assign(ES, {
+ "Les aperçus sont fournis par l’iTunes Store.":"Las vistas previas las proporciona iTunes Store.",
+ "Découvrir NCS":"Descubrir NCS","Titres recherchés":"Canciones buscadas","Des outils pour votre bureau":"Herramientas para tu escritorio",
+ "Ajoute des apps au Dock et lance-les comme les autres applications.":"Añade apps al Dock y ábrelas como las demás aplicaciones.",
+ "EN VEDETTE":"DESTACADO","Les installations sont simulées et sauvegardées localement.":"Las instalaciones son simuladas y se guardan localmente.",
+ "Consulte la météo d’une ville.":"Consulta el tiempo de una ciudad.","Enregistre du son avec ton microphone.":"Graba sonido con tu micrófono.",
+ "Observe les fenêtres de la session simulée.":"Inspecciona las ventanas de la sesión simulada.","Crée un tableau de notes local.":"Crea un tablero local de notas.",
+ "Une petite bibliothèque de lecture.":"Una pequeña biblioteca de lectura.","Horloge locale et fuseaux horaires simulés.":"Reloj local y zonas horarias simuladas.",
+ "Tapez":"Escribe","pour voir les commandes disponibles.":"para ver los comandos disponibles.","Commande inconnue":"Comando desconocido",
+ "Ouvrir les applications associées":"Abrir aplicaciones relacionadas","Cette application fait partie de la session Golden Gate.":"Esta aplicación forma parte de la sesión Golden Gate.",
+ "Mode sombre":"Modo oscuro","Les applications ouvertes apparaissent dans le Dock.":"Las aplicaciones abiertas aparecen en el Dock.",
+ "Favoris":"Favoritos","Répertoire simulé":"Directorio simulado","Dossier créé":"Carpeta creada","Fichier créé":"Archivo creado","Fichier introuvable":"Archivo no encontrado",
+ "Vider la corbeille":"Vaciar papelera","Restaurer":"Restaurar","Événement du":"Evento del","Volume":"Volumen","Luminosité":"Brillo",
+ "Réduire":"Minimizar","Agrandir":"Maximizar","Fermer":"Cerrar","Bibliothèque":"Biblioteca","Documents":"Documentos","Téléchargements":"Descargas","Images":"Imágenes","Applications":"Aplicaciones","Bureau":"Escritorio",
+ "Lancer":"Iniciar","Installé dans ce simulateur.":"Instalada en este simulador.","Application gratuite":"Aplicación gratuita",
+ "Les statistiques système sont simulées : aucune donnée de Windows n’est lue.":"Las estadísticas del sistema son simuladas; no se leen datos de Windows.",
+ "Autorise l’accès au microphone pour enregistrer.":"Permite el acceso al micrófono para grabar.","L’enregistrement audio n’est pas disponible dans ce navigateur.":"La grabación de audio no está disponible en este navegador.",
+ "Charger la météo":"Cargar el tiempo","Impossible de récupérer la météo. Vérifie la ville ou ta connexion.":"No se pudo cargar el tiempo. Comprueba la ciudad o la conexión.",
+ "Conditions variables":"Condiciones variables","Commencer l’enregistrement":"Comenzar grabación","Arrêter l’enregistrement":"Detener grabación","Télécharger le mémo":"Descargar grabación",
+ "Fenêtres ouvertes":"Ventanas abiertas","Fenêtres réduites":"Ventanas minimizadas","Applications disponibles":"Aplicaciones disponibles","État de la session simulée":"Estado de la sesión simulada",
+ "En cours":"En ejecución","Réduite":"Minimizada","Ajouter une note":"Añadir nota","Supprimer la note":"Eliminar nota","Ton tableau est vide.":"Tu tablero está vacío.","Créer la première note":"Crear la primera nota","Lire un extrait":"Leer un extracto","Extraits de démonstration":"Extractos de demostración",
+ "Horloge locale du système · actualisation en direct":"Reloj local del sistema · actualización en directo","Aucun morceau sélectionné":"No hay canción seleccionada",
+ "Catalogue indisponible. Vérifie ta connexion Internet.":"Catálogo musical no disponible. Comprueba tu conexión a Internet.",
+ "Le code actuel est incorrect.":"El código actual es incorrecto.","Code de déverrouillage enregistré.":"Código de desbloqueo guardado.","Code de déverrouillage supprimé.":"Código de desbloqueo eliminado."
+});
+Object.assign(DE, {
+ "Continuer":"Weiter","Démarrer la session":"Sitzung starten","Retour":"Zurück","Choisissez votre pays ou région":"Land oder Region auswählen",
+ "Les aperçus sont fournis par l’iTunes Store.":"Vorschauen werden vom iTunes Store bereitgestellt.","Découvrir NCS":"NCS entdecken","Applications recommandées":"Empfohlene Apps",
+ "Nouveau dossier":"Neuer Ordner","Nouveau fichier":"Neue Datei","Documents":"Dokumente","Téléchargements":"Downloads","Bureau":"Schreibtisch",
+ "Nouvelle note":"Neue Notiz","Sans titre":"Ohne Titel","Restaurer":"Wiederherstellen","Vider la corbeille":"Papierkorb leeren","Langue de l’interface":"Oberflächensprache",
+ "Réduire":"Minimieren","Agrandir":"Maximieren","Fermer":"Schließen","Météo":"Wetter","Dictaphone":"Sprachmemos","Moniteur d’activité":"Aktivitätsanzeige",
+ "Enregistrer":"Sichern","Horloge locale du système · actualisation en direct":"Lokale Systemuhr · Live-Aktualisierung"
+});
+Object.assign(IT, {
+ "Continuer":"Continua","Démarrer la session":"Avvia sessione","Retour":"Indietro","Choisissez votre pays ou région":"Scegli il paese o la regione",
+ "Les aperçus sont fournis par l’iTunes Store.":"Le anteprime sono fornite da iTunes Store.","Découvrir NCS":"Scopri NCS","Applications recommandées":"App consigliate",
+ "Nouveau dossier":"Nuova cartella","Nouveau fichier":"Nuovo file","Documents":"Documenti","Téléchargements":"Download","Bureau":"Scrivania",
+ "Nouvelle note":"Nuova nota","Sans titre":"Senza titolo","Restaurer":"Ripristina","Vider la corbeille":"Svuota cestino","Langue de l’interface":"Lingua dell’interfaccia",
+ "Réduire":"Riduci","Agrandir":"Ingrandisci","Fermer":"Chiudi","Météo":"Meteo","Dictaphone":"Memo Vocali","Moniteur d’activité":"Monitoraggio Attività",
+ "Enregistrer":"Salva","Horloge locale du système · actualisation en direct":"Orologio locale del sistema · aggiornamento in diretta"
+});
+Object.assign(JA, {
+ "Continuer":"続ける","Démarrer la session":"セッションを開始","Retour":"戻る","Choisissez votre pays ou région":"国または地域を選択",
+ "Les aperçus sont fournis par l’iTunes Store.":"プレビューは iTunes Store から提供されます。","Découvrir NCS":"NCS を見つける","Applications recommandées":"おすすめのアプリ",
+ "Nouveau dossier":"新規フォルダ","Nouveau fichier":"新規ファイル","Documents":"書類","Téléchargements":"ダウンロード","Bureau":"デスクトップ",
+ "Nouvelle note":"新規メモ","Sans titre":"名称未設定","Restaurer":"復元","Vider la corbeille":"ゴミ箱を空にする","Langue de l’interface":"インターフェイスの言語",
+ "Réduire":"最小化","Agrandir":"拡大","Fermer":"閉じる","Météo":"天気","Dictaphone":"ボイスメモ","Moniteur d’activité":"アクティビティモニタ",
+ "Enregistrer":"保存","Horloge locale du système · actualisation en direct":"ローカル時刻 · リアルタイム更新"
+});
+
 const dictionaries={en:EN,es:ES,de:DE,it:IT,ja:JA};
 function translate(value,locale){if(typeof value!=="string"||normalizeLocale(locale)==="fr")return value;const core=value.trim();const out=(dictionaries[normalizeLocale(locale)]||{})[core];return out?value.replace(core,out):value;}
 export function localizeTree(node,locale="fr"){if(Array.isArray(node))return node.map(child=>localizeTree(child,locale));if(typeof node==="string")return translate(node,locale);if(!React.isValidElement(node))return node;const props={};for(const key of ["title","placeholder","aria-label","alt"]){if(typeof node.props[key]==="string")props[key]=translate(node.props[key],locale);}if(node.props.children!==undefined)props.children=localizeTree(node.props.children,locale);return React.cloneElement(node,props);}
