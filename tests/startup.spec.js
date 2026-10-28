@@ -37,13 +37,16 @@ test("first-run setup configures a code, unlocks and opens apps manually", async
   await page.locator('.dock button[title="Finder"]').click();
   const appWindow = page.locator(".appwindow").first();
   await expect(appWindow).toBeVisible();
-  const before = await appWindow.boundingBox();
+  // Wait for the Framer Motion entrance animation before measuring drag coordinates.
+  await page.waitForTimeout(500);
+  const dragSurface = page.locator(".react-draggable").first();
+  const before = await dragSurface.boundingBox();
   const body = await page.locator(".windowbody").first().boundingBox();
   await page.mouse.move(body.x + body.width * 0.6, body.y + body.height * 0.5);
   await page.mouse.down();
   await page.mouse.move(body.x + body.width * 0.6 + 70, body.y + body.height * 0.5 + 40, { steps: 6 });
   await page.mouse.up();
-  const afterContentDrag = await appWindow.boundingBox();
+  const afterContentDrag = await dragSurface.boundingBox();
   expect(Math.abs(afterContentDrag.x - before.x)).toBeLessThan(3);
   expect(Math.abs(afterContentDrag.y - before.y)).toBeLessThan(3);
 
@@ -52,7 +55,7 @@ test("first-run setup configures a code, unlocks and opens apps manually", async
   await page.mouse.down();
   await page.mouse.move(title.x + title.width + 55, title.y + title.height / 2 + 35, { steps: 8 });
   await page.mouse.up();
-  await expect.poll(async () => (await appWindow.boundingBox()).x).not.toBe(before.x);
+  await expect.poll(async () => (await dragSurface.boundingBox()).x).not.toBe(before.x);
 
   expect(pageErrors, "browser runtime errors").toEqual([]);
 });
