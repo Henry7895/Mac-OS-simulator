@@ -6,6 +6,7 @@ import {
   Sun, UserRound, Wifi, Volume2, Accessibility, Laptop, Upload, WandSparkles
 } from "lucide-react";
 import "./SetupAssistant.css";
+import { localizeTree, normalizeLocale } from "../i18n.js";
 
 const STAGES = [
   { label: "Langue", title: "Choisissez votre langue", subtitle: "La langue utilisée dans Golden Gate." },
@@ -52,7 +53,7 @@ function BrandMark() {
   return <div className="setup-brand-mark"><span /><span /><span /></div>;
 }
 
-export default function SetupAssistant({ username, wall, dark, avatar, onComplete }) {
+export default function SetupAssistant({ username, wall, dark, avatar, locale = "fr", onLocaleChange, onComplete }) {
   const [step, setStep] = useState(0);
   const [language, setLanguage] = useState("Français");
   const [region, setRegion] = useState("France");
@@ -127,7 +128,7 @@ export default function SetupAssistant({ username, wall, dark, avatar, onComplet
     switch (step) {
       case 0:
         return <div className="setup-choice-list language-list">
-          {LANGUAGES.map((item) => <button key={item.name} className={language === item.name ? "setup-choice selected" : "setup-choice"} onClick={() => setLanguage(item.name)}>
+          {LANGUAGES.map((item) => <button key={item.name} className={language === item.name ? "setup-choice selected" : "setup-choice"} onClick={() => { setLanguage(item.name); onLocaleChange?.(normalizeLocale(item.name)); }}>
             <span className="setup-flag">{item.flag}</span><span className="setup-choice-copy"><b>{item.name}</b><small>{item.detail}</small></span>{language === item.name && <Check size={18} />}
           </button>)}
         </div>;
@@ -187,7 +188,7 @@ export default function SetupAssistant({ username, wall, dark, avatar, onComplet
     }
   };
 
-  return <main className="setup-assistant" style={{ backgroundImage: WALLPAPERS[selectedWall]?.background || undefined }}>
+  return localizeTree(<main className="setup-assistant" style={{ backgroundImage: WALLPAPERS[selectedWall]?.background || undefined }}>
     <div className="setup-backdrop" />
     <div className="setup-topline"><div className="setup-top-brand"><BrandMark/><span>Golden Gate</span></div><div className="setup-top-meta"><LockKeyhole size={13}/> Configuration privée et locale</div></div>
     <motion.section className="setup-panel" initial={{ opacity: 0, scale: 0.965, y: 14 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: 0.38, ease: [0.22, 1, 0.36, 1] }}>
@@ -210,5 +211,5 @@ export default function SetupAssistant({ username, wall, dark, avatar, onComplet
       </div>
     </motion.section>
     <div className="setup-bottom-note">Un simulateur de bureau indépendant · Aucun compte Apple requis</div>
-  </main>;
+  </main>, locale);
 }
