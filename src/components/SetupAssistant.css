@@ -184,3 +184,28 @@
   .setup-account-avatar { width:75px; height:75px; }
   .setup-wall-option>span { height:50px; }
 }
+
+
+.setup-passcode-fields {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  gap: 10px 12px;
+  align-self: stretch;
+  margin-top: 18px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(180,188,202,.35);
+}
+.setup-passcode-intro { grid-column:1 / -1; display:flex; align-items:flex-start; gap:9px; color:#357bd0; }
+.setup-passcode-intro span { display:flex; flex-direction:column; gap:3px; }
+.setup-passcode-intro b { color:#303848; font-size:11px; }
+.setup-passcode-intro small { color:#778092; font-size:9px; line-height:1.45; font-weight:400; }
+.setup-passcode-fields label { display:flex; flex-direction:column; gap:6px; color:#535d6c; font-weight:650; font-size:10px; }
+.setup-passcode-fields input { width:100%; min-width:0; border:1px solid #d9dee7; border-radius:9px; background:#fff; color:#293140; padding:10px 11px; font-size:12px; letter-spacing:2px; }
+.setup-passcode-fields input:focus { outline:none; border-color:#5d9cf0; box-shadow:0 0 0 3px #5d9cf01c; }
+.setup-passcode-error { grid-column:1/-1; color:#b42332; font-size:10px; margin:0; }
+.setup-passcode-fields .setup-footnote { grid-column:1/-1; margin:0; font-size:9px; }
+@media(max-width:620px) {
+ .setup-passcode-fields { grid-template-columns:1fr; }
+ .setup-passcode-intro,.setup-passcode-error,.setup-passcode-fields .setup-footnote { grid-column:1; }
+}
