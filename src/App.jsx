@@ -2,7 +2,7 @@ import React,{useEffect,useMemo,useState} from "react";
 import {motion,AnimatePresence} from "framer-motion";
 import {Rnd} from "react-rnd";
 import SetupAssistant from "./components/SetupAssistant.jsx";
-import {Wifi,Bluetooth,BatteryFull,Search,SlidersHorizontal,Folder,Compass,Terminal as TerminalIcon,StickyNote,Image as ImageIcon,Music,Settings,Calculator,CalendarDays,Trash2,FileText,Globe,Minus,Square,X,ChevronLeft,Plus,Lock,Power,Sun,Moon,Play,Pause,Volume2,Mail,MessageCircle,MapPin,Video,Phone,Contact,ListTodo,Tv,Presentation,Table,Rocket,Download,Monitor,Headphones,LayoutGrid,Airplay,NotebookText} from "lucide-react";
+import {Wifi,Bluetooth,BatteryFull,Search,SlidersHorizontal,Folder,Compass,Terminal as TerminalIcon,StickyNote,Image as ImageIcon,Music,Settings,Calculator,CalendarDays,Trash2,FileText,Globe,Minus,Square,X,ChevronLeft,ChevronRight,Plus,Lock,Power,Sun,Moon,Play,Pause,Volume2,Mail,MessageCircle,MapPin,Video,Phone,Contact,ListTodo,Tv,Presentation,Table,Rocket,Download,Monitor,Headphones,LayoutGrid,Airplay,NotebookText} from "lucide-react";
 
 const APPS=[
 {id:"Finder",icon:Folder,color:"linear-gradient(145deg,#a6edff 0%,#52b5f5 45%,#2185db 46%,#d9f7ff 100%)"},
