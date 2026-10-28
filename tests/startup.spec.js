@@ -110,8 +110,10 @@ test("App Store can install an app and minimized windows restore instead of clos
   await expect(page.locator(".desktop")).toBeVisible();
 
   await page.locator('.dock button[title="App Store"]').click();
-  await expect(page.locator(".appwindow")).toContainText("Applications recommandées");
-  await page.locator(".store-card").filter({ hasText: "Météo" }).getByRole("button", { name: "Obtenir" }).click();
+  await expect(page.locator(".appwindow")).toContainText("Applications Golden Gate");
+  await expect(page.locator(".appwindow")).toContainText("ArtCraft");
+  await expect(page.locator(".appwindow")).toContainText("ArtCraft Team et contributeurs");
+  await page.locator(".store-card").filter({ hasText: "Météo" }).getByRole("button", { name: "Ajouter" }).click();
   await expect(page.locator('.dock button[title="Météo"]')).toBeVisible();
 
   await page.locator('.dock button[title="Finder"]').click();
@@ -123,4 +125,43 @@ test("App Store can install an app and minimized windows restore instead of clos
   await expect(finder).not.toBeVisible();
   await page.locator('.dock button[title="Finder"]').click();
   await expect(finder).toBeVisible();
+});
+
+test("Music defaults to full-length official NCS playback and isolates 30-second previews", async ({ page }) => {
+  const pageErrors = [];
+  page.on("pageerror", error => pageErrors.push(error.message));
+  await page.addInitScript(() => localStorage.setItem("gg-setup", "true"));
+  await page.goto("/");
+  await expect(page.locator(".lockscreen")).toBeVisible();
+  await page.locator(".lockscreen .primary").click();
+  await expect(page.locator(".desktop")).toBeVisible();
+
+  await page.locator('.dock button[title="Musique"]').click();
+  const music = page.locator(".appwindow").filter({ hasText: "NOCOPYRIGHTSOUNDS" });
+  await expect(music.locator(".youtube-player-shell iframe")).toHaveAttribute("src", /youtube-nocookie.com\/embed\/mZhuH_qeRRU/);
+  await expect(music).toContainText("Le lecteur officiel YouTube diffuse la vidéo complète");
+  await expect(music.locator(".music-audio-host")).toHaveCSS("display", "none");
+
+  await music.getByRole("button", { name: /Aperçus iTunes/ }).click();
+  await expect(music.locator(".music-preview-view")).toBeVisible();
+  await expect(music).toContainText("limités par le catalogue iTunes");
+  await music.getByRole("button", { name: /NCS — complet/ }).click();
+  await expect(music.locator(".youtube-player-shell iframe")).toHaveAttribute("src", /youtube-nocookie.com\/embed\/mZhuH_qeRRU/);
+  expect(pageErrors, "browser runtime errors").toEqual([]);
+});
+
+test("creative software cards link to official downloads and identify the creator", async ({ page }) => {
+  await page.addInitScript(() => localStorage.setItem("gg-setup", "true"));
+  await page.goto("/");
+  await expect(page.locator(".lockscreen")).toBeVisible();
+  await page.locator(".lockscreen .primary").click();
+  await page.locator('.dock button[title="App Store"]').click();
+  const store = page.locator(".appwindow");
+  for (const name of ["ArtCraft", "PhotoCraft", "FilmCraft", "LightCraft"]) {
+    const card = store.locator(".creative-card").filter({ hasText: name });
+    await expect(card).toBeVisible();
+    await expect(card).toContainText("ArtCraft Team et contributeurs");
+    await expect(card.getByRole("button", { name: /Voir les téléchargements/ })).toBeVisible();
+    await expect(card.getByRole("button", { name: /Code source/ })).toBeVisible();
+  }
 });
