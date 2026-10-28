@@ -82,11 +82,22 @@ electron/            Electron main process and preload
 
 - Minimizing a window hides it without unmounting its React tree, so app state is preserved and the Dock restores the same window.
 - Safari and Music are separate reusable components. System web builds cannot bypass websites' iframe restrictions, so Safari offers an external-browser fallback where necessary.
-- The music view uses official short previews from the iTunes Search API. Full-track playback remains with the official music service and any account/subscription it requires.
+- Music now opens in a full-track NCS mode by default, using official NCS YouTube uploads with native player controls. iTunes previews are in a separate mode and are explicitly labelled as short excerpts; Apple Music links go to the official service.
+
+## Creative software in the App Store
+
+The App Store includes official download/source links for these real open-source applications, which are not installed inside the simulator:
+
+- **ArtCraft** — AI-assisted creative studio for image, video and 3D work.
+- **PhotoCraft** — photo editor with layers and PSD support.
+- **FilmCraft** — nonlinear video editor with colour and audio tools.
+- **LightCraft** — photo library and non-destructive RAW development.
+
+The creator credit displayed for these apps is **ArtCraft Team et contributeurs**. Their code is dual-licensed under MIT or Apache-2.0; the simulator links to the publishers' release pages rather than repackaging their binaries or assets.
 
 ## Design reference
 
-The interaction checklist and component separation were informed by the public [MacOS-Web-Simulator project](https://github.com/LikhithSP/MacOS-Web-Simulator) (MIT-licensed). This repository has its own implementation and original CSS-generated visuals; its source code, wallpapers and icon assets are not copied into this project.
+The window-lifecycle pattern and desktop interaction references were adapted from the MIT-licensed [MacOS-Web-Simulator project](https://github.com/LikhithSP/MacOS-Web-Simulator). Its README also links to the [macX live demo](https://macx-ruddy.vercel.app/), which is used as a visual reference for desktop polish. Golden Gate maintains its own React implementation and does not bundle upstream wallpapers, logos or icon assets. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for attribution.
 
 ## License and attribution
 
