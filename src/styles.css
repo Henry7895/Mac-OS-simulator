@@ -258,3 +258,45 @@
   backdrop-filter: blur(18px);
 }
 .lockscreen .locksetup:hover { background: rgba(255,255,255,.23); }
+
+
+/* Windows are draggable from their title bar only; app content remains selectable and interactive. */
+.windowtitle { cursor: grab; -webkit-user-select: none; user-select: none; }
+.windowtitle:active { cursor: grabbing; }
+.windowtitle button { cursor: pointer; }
+/* This simulator has a full-width menu bar, not a hardware camera notch. */
+.screen-notch { display: none !important; }
+.lock-code-form {
+  width: min(290px, 82vw);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 9px;
+  margin: 18px auto 0;
+}
+.lock-code-form label { font-size: 12px; color: rgba(255,255,255,.88); }
+.lock-code-form input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.37);
+  background: rgba(255,255,255,.16);
+  color: #fff;
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 18px;
+  outline: none;
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+}
+.lock-code-form input::placeholder { color: rgba(255,255,255,.55); }
+.lock-code-form .primary { margin-top: 3px; }
+.lock-code-error { margin: 0; color: #ffe0e0; font-size: 12px; }
+.settings-passcode-form { display:grid; gap:10px; max-width:460px; }
+.settings-passcode-form label { display:flex; align-items:center; gap:12px; margin:0; }
+.settings-passcode-form label input { min-width:0; flex:1; max-width:none; padding:9px 10px; border:1px solid #d8dce5; border-radius:8px; color:#202838; background:#fff; }
+.settings-passcode-form small { color:#747d8b; font-size:10px; line-height:1.5; }
+.settings-passcode-form .passcode-save { justify-self:start; padding:8px 14px; border-radius:9px; background:#167ee8; color:white; font-size:11px; }
+.settings-passcode-form .passcode-status { margin:0; font-size:11px; color:#287b4c; }
+.dark .settings-passcode-form label input { background:#222630; border-color:#4a505d; color:#f1f3f8; }
+.dark .settings-passcode-form small { color:#b5bdca; }
